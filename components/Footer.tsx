@@ -28,6 +28,13 @@ export const Footer: React.FC = () => {
                   © 2025 EasyWay Technology.
                </p>
             </div>
+
+            {/* Developer Credit */}
+            <div className="mt-8 pt-6 border-t border-zinc-900 text-center">
+               <p className="text-zinc-600 text-[10px] uppercase tracking-widest">
+                  Developed by <span className="text-zinc-400">Mr. Krishna Karki</span>
+               </p>
+            </div>
          </div>
       </footer>
    );
