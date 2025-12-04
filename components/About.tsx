@@ -17,9 +17,9 @@ const STATS = [
 ];
 
 const FOUNDERS = [
-   { name: 'Narendra Kalauni', role: 'CEO & Co-Founder', initial: 'NK' },
-   { name: 'Pankaj Joshi', role: 'Manager & Co-Founder', initial: 'PJ' },
-   { name: 'Krishna Karki', role: 'Senior Developer & Co-Founder', initial: 'KK' },
+   { name: 'Narendra Kalauni', role: 'CEO & Co-Founder', initial: 'NK', image: null },
+   { name: 'Pankaj Joshi', role: 'Manager & Co-Founder', initial: 'PJ', image: null },
+   { name: 'Krishna Karki', role: 'Senior Developer & Co-Founder', initial: 'KK', image: '/images/krishna-karki.png' },
 ];
 
 export const About: React.FC = () => {
@@ -64,9 +64,19 @@ export const About: React.FC = () => {
                      {FOUNDERS.map((founder) => (
                         <div key={founder.name} className="group">
                            <div className="bg-zinc-900 border border-zinc-800 p-6 transition-all duration-300 hover:border-zinc-600 hover:bg-zinc-800">
-                              <div className="w-14 h-14 bg-white text-zinc-950 flex items-center justify-center text-xl font-bold mb-4">
-                                 {founder.initial}
-                              </div>
+                              {founder.image ? (
+                                 <div className="w-16 h-16 rounded-full overflow-hidden mb-4 border-2 border-zinc-700 group-hover:border-white transition-colors">
+                                    <img
+                                       src={founder.image}
+                                       alt={founder.name}
+                                       className="w-full h-full object-cover object-top"
+                                    />
+                                 </div>
+                              ) : (
+                                 <div className="w-16 h-16 bg-white text-zinc-950 rounded-full flex items-center justify-center text-xl font-bold mb-4">
+                                    {founder.initial}
+                                 </div>
+                              )}
                               <h4 className="text-white font-semibold mb-1">{founder.name}</h4>
                               <p className="text-xs text-zinc-500 uppercase tracking-wider">{founder.role}</p>
                            </div>
