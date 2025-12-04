@@ -63,22 +63,29 @@ export const About: React.FC = () => {
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                      {FOUNDERS.map((founder) => (
                         <div key={founder.name} className="group">
-                           <div className="bg-zinc-900 border border-zinc-800 p-6 transition-all duration-300 hover:border-zinc-600 hover:bg-zinc-800">
-                              {founder.image ? (
-                                 <div className="w-16 h-16 rounded-full overflow-hidden mb-4 border-2 border-zinc-700 group-hover:border-white transition-colors">
-                                    <img
-                                       src={founder.image}
-                                       alt={founder.name}
-                                       className="w-full h-full object-cover object-top"
-                                    />
-                                 </div>
-                              ) : (
-                                 <div className="w-16 h-16 bg-white text-zinc-950 rounded-full flex items-center justify-center text-xl font-bold mb-4">
-                                    {founder.initial}
+                           <div
+                              className="relative h-72 overflow-hidden border border-zinc-800 transition-all duration-300 hover:border-zinc-600"
+                              style={founder.image ? {
+                                 backgroundImage: `url(${founder.image})`,
+                                 backgroundSize: 'cover',
+                                 backgroundPosition: 'top center'
+                              } : {}}
+                           >
+                              {/* Gradient overlay */}
+                              <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/60 to-transparent"></div>
+
+                              {/* Fallback for no image */}
+                              {!founder.image && (
+                                 <div className="absolute inset-0 bg-zinc-900 flex items-center justify-center">
+                                    <span className="text-6xl font-bold text-zinc-700">{founder.initial}</span>
                                  </div>
                               )}
-                              <h4 className="text-white font-semibold mb-1">{founder.name}</h4>
-                              <p className="text-xs text-zinc-500 uppercase tracking-wider">{founder.role}</p>
+
+                              {/* Text content */}
+                              <div className="absolute bottom-0 left-0 right-0 p-6">
+                                 <h4 className="text-white font-semibold text-lg mb-1">{founder.name}</h4>
+                                 <p className="text-xs text-zinc-400 uppercase tracking-wider">{founder.role}</p>
+                              </div>
                            </div>
                         </div>
                      ))}
