@@ -25,7 +25,7 @@ export const Footer: React.FC = () => {
                </div>
 
                <p className="text-zinc-600 text-[10px] uppercase tracking-widest">
-                  © 2024 EasyWay Technology.
+                  © 2025 EasyWay Technology.
                </p>
             </div>
          </div>

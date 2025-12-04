@@ -16,6 +16,12 @@ const STATS = [
    { value: '5+', label: 'Businesses' },
 ];
 
+const FOUNDERS = [
+   { name: 'Narendra Kalauni', role: 'CEO & Co-Founder', initial: 'NK' },
+   { name: 'Pankaj Joshi', role: 'Manager & Co-Founder', initial: 'PJ' },
+   { name: 'Krishna Karki', role: 'Senior Developer & Co-Founder', initial: 'KK' },
+];
+
 export const About: React.FC = () => {
    return (
       <section id="about" className="bg-zinc-950 border-t border-zinc-800">
@@ -33,7 +39,7 @@ export const About: React.FC = () => {
                <h2 className="text-5xl font-display font-bold text-white mb-4">
                   MAKING AN IMPACT
                </h2>
-               <p className="text-zinc-500 text-sm uppercase tracking-widest mb-8">EST. 2014</p>
+               <p className="text-zinc-500 text-sm uppercase tracking-widest mb-8">EST. 2025</p>
                <p className="text-xl text-white font-light mb-8 leading-relaxed">
                   EasyWay Technology is a digital product studio. We bridge the gap between human intuition and machine intelligence.
                </p>
@@ -49,6 +55,24 @@ export const About: React.FC = () => {
                         <span className="text-xs text-zinc-500 uppercase tracking-widest">{stat.label}</span>
                      </div>
                   ))}
+               </div>
+
+               {/* Founders Section */}
+               <div className="mb-12">
+                  <span className="text-xs text-zinc-500 uppercase tracking-widest block mb-6">Our Founders</span>
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                     {FOUNDERS.map((founder) => (
+                        <div key={founder.name} className="group">
+                           <div className="bg-zinc-900 border border-zinc-800 p-6 transition-all duration-300 hover:border-zinc-600 hover:bg-zinc-800">
+                              <div className="w-14 h-14 bg-white text-zinc-950 flex items-center justify-center text-xl font-bold mb-4">
+                                 {founder.initial}
+                              </div>
+                              <h4 className="text-white font-semibold mb-1">{founder.name}</h4>
+                              <p className="text-xs text-zinc-500 uppercase tracking-wider">{founder.role}</p>
+                           </div>
+                        </div>
+                     ))}
+                  </div>
                </div>
 
                {/* Trusted By Section */}
