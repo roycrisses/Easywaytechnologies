@@ -23,6 +23,15 @@ export const Header: React.FC = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault();
+    const targetId = href.replace('#', '');
+    const target = document.getElementById(targetId);
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 border-b ${isScrolled ? 'bg-zinc-950/80 backdrop-blur-md border-zinc-800 py-4' : 'bg-transparent border-transparent py-6'
@@ -40,6 +49,7 @@ export const Header: React.FC = () => {
               key={item.label}
               href={item.href}
               className="text-xs font-medium uppercase tracking-widest text-zinc-400 hover:text-white transition-colors"
+              onClick={(e) => handleNavClick(e, item.href)}
             >
               {item.label}
             </a>
@@ -73,7 +83,10 @@ export const Header: React.FC = () => {
                 key={item.label}
                 href={item.href}
                 className="text-3xl font-display font-bold text-white uppercase hover:text-zinc-500 transition-colors"
-                onClick={() => setIsMobileMenuOpen(false)}
+                onClick={(e) => {
+                  handleNavClick(e, item.href);
+                  setIsMobileMenuOpen(false);
+                }}
               >
                 {item.label}
               </a>
