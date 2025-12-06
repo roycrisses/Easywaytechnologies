@@ -12,6 +12,10 @@ import { Pricing } from './components/Pricing';
 function App() {
   const [selectedService, setSelectedService] = React.useState<string | null>(null);
 
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   if (selectedService) {
     return (
       <div className="min-h-screen bg-zinc-950 font-sans selection:bg-white selection:text-black">
