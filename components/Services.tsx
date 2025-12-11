@@ -173,47 +173,47 @@ interface ServicesProps {
 
 export const Services: React.FC<ServicesProps> = ({ onServiceClick }) => {
   return (
-    <section id="services" className="bg-zinc-50 dark:bg-zinc-950 border-t border-zinc-200 dark:border-zinc-800 scroll-mt-28 transition-colors duration-300">
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-px bg-zinc-200 dark:bg-zinc-800/50">
+    <section id="services" className="bg-slate-50 dark:bg-zinc-950 border-t border-slate-200 dark:border-zinc-800 scroll-mt-28 transition-colors duration-300">
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-px bg-slate-200 dark:bg-zinc-800/50">
         {SERVICES.map((service, index) => (
           <div
             key={service.id}
             onClick={() => onServiceClick(service.id)}
-            className="group p-12 bg-white dark:bg-zinc-950 relative hover:bg-zinc-50 dark:hover:bg-zinc-900/50 transition-all duration-500 cursor-pointer h-full"
+            className="group p-12 bg-white dark:bg-zinc-950 relative hover:bg-sky-50 dark:hover:bg-zinc-900/50 transition-all duration-500 cursor-pointer h-full"
           >
             <div className="flex justify-between items-start mb-12">
-              <span className="text-xs font-mono text-zinc-400 dark:text-zinc-600">0{index + 1}</span>
-              <service.icon className="w-6 h-6 text-zinc-900 dark:text-white group-hover:scale-110 transition-transform duration-500" />
+              <span className="text-xs font-mono text-slate-400 dark:text-zinc-600">0{index + 1}</span>
+              <service.icon className="w-6 h-6 text-amber-500 dark:text-white group-hover:scale-110 group-hover:text-amber-600 dark:group-hover:text-white transition-all duration-500" />
             </div>
 
-            <h3 className="text-2xl font-display font-bold text-zinc-900 dark:text-white mb-4 uppercase">{service.title}</h3>
-            <p className="text-zinc-600 dark:text-zinc-500 text-sm leading-relaxed mb-8 max-w-xs transition-colors">
+            <h3 className="text-2xl font-display font-bold text-slate-900 dark:text-white mb-4 uppercase">{service.title}</h3>
+            <p className="text-slate-600 dark:text-zinc-500 text-sm leading-relaxed mb-8 max-w-xs transition-colors">
               {service.description}
             </p>
 
             <div className="flex justify-between items-end">
               <ul className="flex flex-wrap gap-2">
                 {service.features.map(f => (
-                  <li key={f} className="text-[10px] uppercase tracking-wider font-medium px-2 py-1 bg-zinc-100 dark:bg-zinc-900 text-zinc-600 dark:text-zinc-400 border border-zinc-200 dark:border-zinc-800 transition-colors">
+                  <li key={f} className="text-[10px] uppercase tracking-wider font-medium px-2 py-1 bg-slate-100 dark:bg-zinc-900 text-slate-600 dark:text-zinc-400 border border-slate-200 dark:border-zinc-800 transition-colors group-hover:border-amber-200 dark:group-hover:border-zinc-800">
                     {f}
                   </li>
                 ))}
               </ul>
               <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <ArrowRight className="w-5 h-5 text-zinc-900 dark:text-white" />
+                <ArrowRight className="w-5 h-5 text-amber-500 dark:text-white" />
               </div>
             </div>
           </div>
         ))}
       </div>
 
-      <div className="py-24 px-6 lg:px-12 border-b border-zinc-200 dark:border-zinc-800 transition-colors bg-zinc-50 dark:bg-zinc-950">
+      <div className="py-24 px-6 lg:px-12 border-b border-slate-200 dark:border-zinc-800 transition-colors bg-slate-50 dark:bg-zinc-950">
         <div className="container mx-auto flex flex-col md:flex-row justify-between items-end gap-8">
-          <h2 className="text-4xl md:text-6xl font-display font-bold text-zinc-900 dark:text-white leading-tight transition-colors">
+          <h2 className="text-4xl md:text-6xl font-display font-bold text-slate-900 dark:text-white leading-tight transition-colors">
             SYSTEMS FOR <br />
             <span className="text-outline-dark dark:text-outline">THE FUTURE</span>
           </h2>
-          <p className="text-zinc-600 dark:text-zinc-400 max-w-md text-right md:text-left transition-colors">
+          <p className="text-slate-600 dark:text-zinc-400 max-w-md text-right md:text-left transition-colors">
             We don't just build websites. We build digital ecosystems designed to scale, perform, and convert.
           </p>
         </div>
