@@ -49,7 +49,7 @@ export const Header: React.FC = () => {
             <a
               key={item.label}
               href={item.href}
-              className="text-xs font-medium uppercase tracking-widest text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors"
+              className="text-xs font-medium uppercase tracking-widest text-slate-500 dark:text-zinc-400 hover:text-amber-600 dark:hover:text-amber-400 transition-colors"
               onClick={(e) => handleNavClick(e, item.href)}
             >
               {item.label}
@@ -65,7 +65,7 @@ export const Header: React.FC = () => {
         <div className="flex items-center gap-4 md:hidden">
           <ThemeToggle />
           <button
-            className="text-zinc-900 dark:text-white"
+            className="text-slate-900 dark:text-white hover:text-amber-500 transition-colors"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
             {isMobileMenuOpen ? <X /> : <Menu />}
@@ -75,9 +75,9 @@ export const Header: React.FC = () => {
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="fixed inset-0 bg-white dark:bg-zinc-950 z-40 flex flex-col justify-center p-8 transition-colors duration-300">
+        <div className="fixed inset-0 bg-slate-50 dark:bg-zinc-950 z-40 flex flex-col justify-center p-8 transition-colors duration-300">
           <button
-            className="absolute top-6 right-6 text-zinc-900 dark:text-white"
+            className="absolute top-6 right-6 text-slate-900 dark:text-white hover:text-amber-500 transition-colors"
             onClick={() => setIsMobileMenuOpen(false)}
           >
             <X size={32} />
@@ -87,7 +87,7 @@ export const Header: React.FC = () => {
               <a
                 key={item.label}
                 href={item.href}
-                className="text-3xl font-display font-bold text-zinc-900 dark:text-white uppercase hover:text-zinc-500 dark:hover:text-zinc-500 transition-colors"
+                className="text-3xl font-display font-bold text-slate-900 dark:text-white uppercase hover:text-amber-500 dark:hover:text-amber-400 transition-colors"
                 onClick={(e) => {
                   handleNavClick(e, item.href);
                   setIsMobileMenuOpen(false);
