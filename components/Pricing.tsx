@@ -19,37 +19,37 @@ export const Pricing: React.FC<PricingProps> = ({ serviceId, onBack, onContact }
   if (!service) return null;
 
   return (
-    <div className="min-h-screen bg-zinc-950 pt-32 pb-24">
+    <div className="min-h-screen bg-white dark:bg-zinc-950 pt-32 pb-24 transition-colors duration-300">
       <div className="container mx-auto px-6 lg:px-12">
         <button
           onClick={onBack}
-          className="group flex items-center gap-3 text-zinc-500 hover:text-white mb-12 transition-colors uppercase text-xs tracking-widest font-medium"
+          className="group flex items-center gap-3 text-zinc-500 hover:text-zinc-900 dark:hover:text-white mb-12 transition-colors uppercase text-xs tracking-widest font-medium"
         >
           <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
           Back to Services
         </button>
 
         <div className="mb-24">
-          <h1 className="text-6xl md:text-8xl font-display font-bold text-white uppercase mb-6 leading-[0.9]">
-            {service.title} <br /> <span className="text-zinc-800">Pricing</span>
+          <h1 className="text-6xl md:text-8xl font-display font-bold text-zinc-900 dark:text-white uppercase mb-6 leading-[0.9] transition-colors">
+            {service.title} <br /> <span className="text-zinc-400 dark:text-zinc-800 transition-colors">Pricing</span>
           </h1>
-          <p className="text-xl text-zinc-400 max-w-2xl font-light">
+          <p className="text-xl text-zinc-600 dark:text-zinc-400 max-w-2xl font-light transition-colors">
             Transparent investment for high-caliber results. Select the tier that aligns with your trajectory.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 border-t border-l border-zinc-800">
+        <div className="grid md:grid-cols-3 border-t border-l border-zinc-200 dark:border-zinc-800 transition-colors">
           {service.pricing.map((tier, index) => (
             <div
               key={tier.name}
-              className="border-r border-b border-zinc-800 p-10 flex flex-col h-full hover:bg-zinc-900/30 transition-colors"
+              className="border-r border-b border-zinc-200 dark:border-zinc-800 p-10 flex flex-col h-full hover:bg-zinc-50 dark:hover:bg-zinc-900/30 transition-colors"
             >
               <div className="mb-8">
                 <span className="text-xs uppercase tracking-widest text-zinc-500 mb-2 block">0{index + 1} — {tier.name}</span>
-                <div className="text-4xl font-display font-bold text-white">{tier.price}</div>
+                <div className="text-4xl font-display font-bold text-zinc-900 dark:text-white transition-colors">{tier.price}</div>
               </div>
 
-              <p className="text-zinc-400 text-sm mb-12 min-h-[40px]">
+              <p className="text-zinc-600 dark:text-zinc-400 text-sm mb-12 min-h-[40px] transition-colors">
                 {tier.description}
               </p>
 
