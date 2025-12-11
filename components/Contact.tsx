@@ -37,11 +37,11 @@ export const Contact: React.FC = () => {
             <div className="mt-24 grid grid-cols-1 md:grid-cols-3 gap-8 text-center border-t border-slate-200 dark:border-zinc-900 pt-12 transition-colors">
                <div>
                   <p className="text-xs uppercase tracking-widest text-slate-500 dark:text-zinc-600 mb-2">Email</p>
-                  <a href="mailto:info@easyway.com.np" className="text-slate-900 dark:text-white hover:text-amber-600 dark:hover:text-zinc-400 transition-colors">info@easyway.com.np</a>
+                  <a href="mailto:info@easyway.com.np" className="text-slate-900 dark:text-white hover:text-sky-500 dark:hover:text-zinc-400 transition-colors">info@easyway.com.np</a>
                </div>
                <div>
                   <p className="text-xs uppercase tracking-widest text-slate-500 dark:text-zinc-600 mb-2">Phone</p>
-                  <a href="tel:+9779700804395" className="text-slate-900 dark:text-white hover:text-amber-600 dark:hover:text-zinc-400 transition-colors">+977 9700804395</a>
+                  <a href="tel:+9779700804395" className="text-slate-900 dark:text-white hover:text-amber-500 dark:hover:text-zinc-400 transition-colors">+977 9700804395</a>
                </div>
                <div>
                   <p className="text-xs uppercase tracking-widest text-slate-500 dark:text-zinc-600 mb-2">Location</p>

@@ -82,8 +82,8 @@ export const About: React.FC = () => {
 
                               {/* Text content */}
                               <div className="absolute bottom-0 left-0 right-0 p-6">
-                                 <h4 className="text-white font-semibold text-lg mb-1">{founder.name}</h4>
-                                 <p className="text-xs text-slate-300 uppercase tracking-wider">{founder.role}</p>
+                                 <h4 className="text-white font-semibold text-lg mb-1 group-hover:text-amber-400 transition-colors">{founder.name}</h4>
+                                 <p className="text-xs text-slate-300 uppercase tracking-wider group-hover:text-sky-400 transition-colors">{founder.role}</p>
                               </div>
                            </div>
                         </div>

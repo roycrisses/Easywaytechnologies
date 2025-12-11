@@ -48,8 +48,8 @@ export const Logo: React.FC<LogoProps> = ({ className = '', size = 'md' }) => {
 
             {/* Text Logo */}
             <div className={`font-display font-bold tracking-tighter ${fontSize}`}>
-                <span className="text-white">EasyWay</span>
-                <span className="text-zinc-500">Tech</span>
+                <span className="text-slate-900 dark:text-white transition-colors">EasyWay</span>
+                <span className="text-amber-500 dark:text-zinc-500 transition-colors">Tech</span>
             </div>
         </div>
     );
