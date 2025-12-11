@@ -62,15 +62,15 @@ export const AiConsultant: React.FC = () => {
         <div className="flex flex-col lg:flex-row gap-16">
 
           <div className="lg:w-1/3">
-            <div className="flex items-center gap-3 mb-6 text-slate-900 dark:text-white transition-colors">
-              <Terminal className="w-6 h-6 text-amber-500 dark:text-white" />
-              <span className="font-mono text-sm uppercase tracking-widest text-slate-500">AI Interface v2.5</span>
+            <div className="flex items-center gap-3 mb-6 text-white dark:text-white transition-colors">
+              <Terminal className="w-6 h-6 text-egold dark:text-white" />
+              <span className="font-mono text-sm uppercase tracking-widest text-white/70">AI Interface v2.5</span>
             </div>
             <h2 className="text-4xl font-display font-bold mb-6 transition-colors">
               <span className="text-amber-500 dark:text-white">INTELLIGENT</span> <br />
               <span className="text-sky-500 dark:text-white">CONSULTATION</span>
             </h2>
-            <p className="text-slate-600 dark:text-zinc-400 mb-8 font-light transition-colors">
+            <p className="text-white/80 dark:text-zinc-400 mb-8 font-light transition-colors">
               Interact with our trained model to get instant estimates, technology recommendations, and capability overviews.
             </p>
 
@@ -121,13 +121,13 @@ export const AiConsultant: React.FC = () => {
 
               {/* Input Line */}
               <form onSubmit={handleSend} className="border-t border-egold dark:border-zinc-800 p-4 bg-eblue dark:bg-zinc-950 flex items-center gap-4 transition-colors">
-                <span className="text-slate-500 font-mono">{'>'}</span>
+                <span className="text-white/70 font-mono">{'>'}</span>
                 <input
                   type="text"
                   value={input}
                   onChange={(e) => setInput(e.target.value)}
-                  placeholder="Enter command or query..."
-                  className="flex-1 bg-transparent border-none text-slate-900 dark:text-white font-mono text-sm focus:ring-0 focus:outline-none placeholder-slate-400 dark:placeholder-zinc-700 transition-colors"
+                  placeholder="Ask about our services..."
+                  className="flex-1 bg-transparent text-white dark:text-white focus:outline-none placeholder-white/50 dark:placeholder-zinc-600"
                 />
                 <button
                   type="submit"

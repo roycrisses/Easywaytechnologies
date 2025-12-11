@@ -23,7 +23,7 @@ export const Pricing: React.FC<PricingProps> = ({ serviceId, onBack, onContact }
       <div className="container mx-auto px-6 lg:px-12">
         <button
           onClick={onBack}
-          className="group flex items-center gap-3 text-slate-500 hover:text-slate-900 dark:hover:text-white mb-12 transition-colors uppercase text-xs tracking-widest font-medium"
+          className="group flex items-center gap-3 text-white/70 hover:text-egold dark:hover:text-white mb-12 transition-colors uppercase text-xs tracking-widest font-medium"
         >
           <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
           Back to Services
@@ -33,7 +33,7 @@ export const Pricing: React.FC<PricingProps> = ({ serviceId, onBack, onContact }
           <h1 className="text-6xl md:text-8xl font-display font-bold uppercase mb-6 leading-[0.9] transition-colors">
             <span className="text-egold dark:text-white">{service.title}</span> <br /> <span className="text-ered dark:text-zinc-800 transition-colors">Pricing</span>
           </h1>
-          <p className="text-xl text-slate-600 dark:text-zinc-400 max-w-2xl font-light transition-colors">
+          <p className="text-xl text-white/80 dark:text-zinc-400 max-w-2xl font-light transition-colors">
             Transparent investment for high-caliber results. Select the tier that aligns with your trajectory.
           </p>
         </div>
@@ -49,7 +49,7 @@ export const Pricing: React.FC<PricingProps> = ({ serviceId, onBack, onContact }
                 <div className="text-4xl font-display font-bold text-ered dark:text-white group-hover:text-egold dark:group-hover:text-white transition-colors">{tier.price}</div>
               </div>
 
-              <p className="text-slate-600 dark:text-zinc-400 text-sm mb-12 min-h-[40px] transition-colors">
+              <p className="text-white/80 dark:text-zinc-400 text-sm mb-12 min-h-[40px] transition-colors">
                 {tier.description}
               </p>
 

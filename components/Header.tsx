@@ -49,7 +49,7 @@ export const Header: React.FC = () => {
             <a
               key={item.label}
               href={item.href}
-              className="text-xs font-medium uppercase tracking-widest text-slate-500 dark:text-zinc-400 hover:text-amber-600 dark:hover:text-amber-400 transition-colors"
+              className="text-xs font-medium uppercase tracking-widest text-slate-800 dark:text-zinc-400 hover:text-ered dark:hover:text-white transition-colors"
               onClick={(e) => handleNavClick(e, item.href)}
             >
               {item.label}
@@ -87,7 +87,7 @@ export const Header: React.FC = () => {
               <a
                 key={item.label}
                 href={item.href}
-                className="text-3xl font-display font-bold text-slate-900 dark:text-white uppercase hover:text-amber-500 dark:hover:text-amber-400 transition-colors"
+                className="text-4xl font-display font-bold uppercase text-white dark:text-zinc-400 hover:text-egold dark:hover:text-white transition-colors"
                 onClick={(e) => {
                   handleNavClick(e, item.href);
                   setIsMobileMenuOpen(false);

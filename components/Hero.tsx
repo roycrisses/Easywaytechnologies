@@ -15,7 +15,7 @@ export const Hero: React.FC = () => {
               <span className="text-white dark:text-white">SHIFT.</span>
             </h1>
 
-            <p className="text-lg md:text-xl text-slate-600 dark:text-zinc-400 max-w-lg mb-12 leading-relaxed font-light transition-colors">
+            <p className="text-lg md:text-xl text-white/80 dark:text-zinc-400 max-w-lg mb-12 leading-relaxed font-light transition-colors">
               We craft digital experiences that defy expectation. Minimalist architecture for maximum impact.
             </p>
 
@@ -38,8 +38,8 @@ export const Hero: React.FC = () => {
             </div>
 
             <div className="absolute bottom-0 right-0 p-6 bg-egold dark:bg-zinc-900 border border-ered dark:border-zinc-800 max-w-[200px] transition-colors shadow-sm dark:shadow-none">
-              <Globe className="w-6 h-6 text-sky-500 dark:text-white mb-3" />
-              <p className="text-xs text-slate-700 dark:text-zinc-400 uppercase tracking-wider leading-relaxed transition-colors">
+              <Globe className="w-6 h-6 text-ered dark:text-white mb-3" />
+              <p className="text-xs text-slate-900 dark:text-zinc-400 uppercase tracking-wider leading-relaxed transition-colors">
                 Serving clients worldwide from our digital HQ.
               </p>
             </div>

@@ -174,7 +174,7 @@ interface ServicesProps {
 export const Services: React.FC<ServicesProps> = ({ onServiceClick }) => {
   return (
     <section id="services" className="bg-eblue dark:bg-zinc-950 border-t border-egold dark:border-zinc-800 scroll-mt-28 transition-colors duration-300">
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-px bg-slate-200 dark:bg-zinc-800/50">
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-px bg-egold dark:bg-zinc-800/50">
         {SERVICES.map((service, index) => (
           <div
             key={service.id}
@@ -182,14 +182,12 @@ export const Services: React.FC<ServicesProps> = ({ onServiceClick }) => {
             className="group p-12 bg-egold dark:bg-zinc-950 relative hover:bg-ered dark:hover:bg-zinc-900/50 transition-all duration-500 cursor-pointer h-full"
           >
             <div className="flex justify-between items-start mb-12">
-              <span className="text-xs font-mono text-slate-400 dark:text-zinc-600">0{index + 1}</span>
-              <service.icon className="w-6 h-6 text-amber-500 dark:text-white group-hover:scale-110 group-hover:text-amber-600 dark:group-hover:text-white transition-all duration-500" />
+              <span className="text-xs font-mono text-slate-700 dark:text-zinc-600">0{index + 1}</span>
+              <service.icon className="w-8 h-8 text-ered dark:text-white transition-colors" />
             </div>
 
-            <h3 className="text-2xl font-display font-bold text-slate-900 dark:text-white mb-4 uppercase">{service.title}</h3>
-            <p className="text-slate-600 dark:text-zinc-500 text-sm leading-relaxed mb-8 max-w-xs transition-colors">
-              {service.description}
-            </p>
+            <h3 className="text-2xl font-display font-bold text-slate-900 dark:text-white mb-4 transition-colors">{service.title}</h3>
+            <p className="text-slate-700 dark:text-zinc-500 text-sm leading-relaxed mb-8 transition-colors">{service.description}</p>
 
             <div className="flex justify-between items-end">
               <ul className="flex flex-wrap gap-2">
@@ -213,7 +211,7 @@ export const Services: React.FC<ServicesProps> = ({ onServiceClick }) => {
             <span className="text-ered dark:text-white">SYSTEMS FOR</span> <br />
             <span className="text-eblue dark:text-outline">THE FUTURE</span>
           </h2>
-          <p className="text-slate-600 dark:text-zinc-400 max-w-md text-right md:text-left transition-colors">
+          <p className="text-slate-700 dark:text-zinc-400 max-w-md text-right md:text-left transition-colors">
             We don't just build websites. We build digital ecosystems designed to scale, perform, and convert.
           </p>
         </div>
