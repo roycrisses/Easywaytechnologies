@@ -23,7 +23,7 @@ const FOUNDERS = [
 
 export const About: React.FC = () => {
    return (
-      <section id="about" className="bg-egold dark:bg-zinc-950 border-t border-ered dark:border-zinc-800 transition-colors duration-300">
+      <section id="about" className="bg-cyan dark:bg-zinc-950 border-t border-azure dark:border-zinc-800 transition-colors duration-300">
          <div className="grid lg:grid-cols-2">
             <div className="relative h-[500px] lg:h-auto overflow-hidden">
                <img
@@ -36,9 +36,9 @@ export const About: React.FC = () => {
 
             <div className="p-12 lg:p-24 flex flex-col justify-center">
                <h2 className="text-5xl font-bungee font-bold mb-4 transition-colors">
-                  <span className="text-ered dark:text-white">MAKING AN</span> <span className="text-eblue dark:text-white">IMPACT</span>
+                  <span className="text-black dark:text-white">MAKING AN</span> <span className="text-azure dark:text-white">IMPACT</span>
                </h2>
-               <p className="text-eblue dark:text-amber-500 font-bold text-sm uppercase tracking-widest mb-8">EST. 2025</p>
+               <p className="text-azure dark:text-amber-500 font-bold text-sm uppercase tracking-widest mb-8">EST. 2025</p>
                <p className="text-xl text-black dark:text-white font-light mb-8 leading-relaxed transition-colors">
                   EasyWay Technology is a digital product studio. We bridge the gap between human intuition and machine intelligence.
                </p>
@@ -50,8 +50,8 @@ export const About: React.FC = () => {
                <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
                   {STATS.map((stat) => (
                      <div key={stat.label}>
-                        <span className="block text-3xl font-bold text-ered dark:text-white mb-2 transition-colors">{stat.value}</span>
-                        <span className="text-xs text-eblue dark:text-zinc-500 uppercase tracking-widest">{stat.label}</span>
+                        <span className="block text-3xl font-bold text-black dark:text-white mb-2 transition-colors">{stat.value}</span>
+                        <span className="text-xs text-azure dark:text-zinc-500 uppercase tracking-widest">{stat.label}</span>
                      </div>
                   ))}
                </div>
@@ -63,7 +63,7 @@ export const About: React.FC = () => {
                      {FOUNDERS.map((founder) => (
                         <div key={founder.name} className="group">
                            <div
-                              className="relative h-72 overflow-hidden border border-ered dark:border-zinc-800 transition-all duration-300 hover:border-eblue dark:hover:border-zinc-600 bg-eblue dark:bg-zinc-900 shadow-sm dark:shadow-none"
+                              className="relative h-72 overflow-hidden border border-azure dark:border-zinc-800 transition-all duration-300 hover:border-aqua dark:hover:border-zinc-600 bg-aqua dark:bg-zinc-900 shadow-sm dark:shadow-none"
                               style={founder.image ? {
                                  backgroundImage: `url(${founder.image})`,
                                  backgroundSize: 'cover',
@@ -75,8 +75,8 @@ export const About: React.FC = () => {
 
                               {/* Fallback for no image */}
                               {!founder.image && (
-                                 <div className="absolute inset-0 bg-egold dark:bg-zinc-900 flex items-center justify-center transition-colors">
-                                    <span className="text-6xl font-bold text-slate-300 dark:text-zinc-700">{founder.initial}</span>
+                                 <div className="absolute inset-0 bg-aqua dark:bg-zinc-900 flex items-center justify-center transition-colors">
+                                    <span className="text-6xl font-bold text-black/30 dark:text-zinc-700">{founder.initial}</span>
                                  </div>
                               )}
 
@@ -93,12 +93,12 @@ export const About: React.FC = () => {
 
                {/* Trusted By Section */}
                <div>
-                  <span className="text-xs text-slate-500 uppercase tracking-widest block mb-6">Trusted By</span>
+                  <span className="text-xs text-black/70 uppercase tracking-widest block mb-6">Trusted By</span>
                   <div className="flex flex-wrap gap-4">
                      {CLIENTS.map((client) => (
                         <span
                            key={client}
-                           className="text-sm text-white dark:text-zinc-300 px-4 py-2 border border-egold dark:border-zinc-800 bg-eblue dark:bg-zinc-900/50 transition-colors shadow-sm dark:shadow-none"
+                           className="text-sm text-black dark:text-zinc-300 px-4 py-2 border border-azure dark:border-zinc-800 bg-aqua dark:bg-zinc-900/50 transition-colors shadow-sm dark:shadow-none"
                         >
                            {client}
                         </span>

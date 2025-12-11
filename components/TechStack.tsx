@@ -54,12 +54,12 @@ export const TechStack: React.FC = () => {
     const duplicatedStack = [...techStack, ...techStack];
 
     return (
-        <section className="py-24 bg-egold dark:bg-zinc-950 border-t border-ered dark:border-zinc-800 overflow-hidden transition-colors duration-300">
+        <section className="py-24 bg-cyan dark:bg-zinc-950 border-t border-azure dark:border-zinc-800 overflow-hidden transition-colors duration-300">
             <div className="container mx-auto px-6 lg:px-12 mb-16">
                 <div className="text-center">
-                    <p className="text-xs uppercase tracking-[0.3em] text-ered dark:text-zinc-500 mb-4">Technologies We Master</p>
+                    <p className="text-xs uppercase tracking-[0.3em] text-black/70 dark:text-zinc-500 mb-4">Technologies We Master</p>
                     <h2 className="text-4xl md:text-5xl font-audiowide font-bold transition-colors">
-                        <span className="text-eblue dark:text-white">Our Tech</span> <span className="text-ered dark:text-white">Stack</span>
+                        <span className="text-black dark:text-white">Our Tech</span> <span className="text-azure dark:text-white">Stack</span>
                     </h2>
                 </div>
             </div>
@@ -72,7 +72,7 @@ export const TechStack: React.FC = () => {
                             key={`row1-${index}`}
                             className="flex-shrink-0 mx-4 group"
                         >
-                            <div className="w-24 h-24 md:w-28 md:h-28 bg-eblue dark:bg-zinc-900 border border-egold dark:border-zinc-800 rounded-xl flex flex-col items-center justify-center gap-2 transition-all duration-300 hover:border-amber-400 dark:hover:border-zinc-600 hover:scale-110 shadow-sm dark:shadow-none">
+                            <div className="w-24 h-24 md:w-28 md:h-28 bg-aqua dark:bg-zinc-900 border border-azure dark:border-zinc-800 rounded-xl flex flex-col items-center justify-center gap-2 transition-all duration-300 hover:border-amber-400 dark:hover:border-zinc-600 hover:scale-110 shadow-sm dark:shadow-none">
                                 <img
                                     src={tech.icon}
                                     alt={tech.name}
@@ -95,7 +95,7 @@ export const TechStack: React.FC = () => {
                             key={`row2-${index}`}
                             className="flex-shrink-0 mx-4 group"
                         >
-                            <div className="w-24 h-24 md:w-28 md:h-28 bg-eblue dark:bg-zinc-900 border border-egold dark:border-zinc-800 rounded-xl flex flex-col items-center justify-center gap-2 transition-all duration-300 hover:border-amber-400 dark:hover:border-zinc-600 hover:scale-110 shadow-sm dark:shadow-none">
+                            <div className="w-24 h-24 md:w-28 md:h-28 bg-aqua dark:bg-zinc-900 border border-azure dark:border-zinc-800 rounded-xl flex flex-col items-center justify-center gap-2 transition-all duration-300 hover:border-amber-400 dark:hover:border-zinc-600 hover:scale-110 shadow-sm dark:shadow-none">
                                 <img
                                     src={tech.icon}
                                     alt={tech.name}

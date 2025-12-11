@@ -19,11 +19,11 @@ export const Pricing: React.FC<PricingProps> = ({ serviceId, onBack, onContact }
   if (!service) return null;
 
   return (
-    <div className="min-h-screen bg-eblue dark:bg-zinc-950 pt-32 pb-24 transition-colors duration-300">
+    <div className="min-h-screen bg-mint dark:bg-zinc-950 pt-32 pb-24 transition-colors duration-300">
       <div className="container mx-auto px-6 lg:px-12">
         <button
           onClick={onBack}
-          className="group flex items-center gap-3 text-white/70 hover:text-egold dark:hover:text-white mb-12 transition-colors uppercase text-xs tracking-widest font-medium"
+          className="group flex items-center gap-3 text-black/70 hover:text-azure dark:hover:text-white mb-12 transition-colors uppercase text-xs tracking-widest font-medium"
         >
           <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
           Back to Services
@@ -31,7 +31,7 @@ export const Pricing: React.FC<PricingProps> = ({ serviceId, onBack, onContact }
 
         <div className="mb-24">
           <h1 className="text-6xl md:text-8xl font-display font-bold uppercase mb-6 leading-[0.9] transition-colors">
-            <span className="text-egold dark:text-white">{service.title}</span> <br /> <span className="text-ered dark:text-zinc-800 transition-colors">Pricing</span>
+            <span className="text-black dark:text-white">{service.title}</span> <br /> <span className="text-azure dark:text-zinc-800 transition-colors">Pricing</span>
           </h1>
           <p className="text-xl text-black dark:text-zinc-400 max-w-2xl font-light transition-colors">
             Transparent investment for high-caliber results. Select the tier that aligns with your trajectory.
@@ -42,11 +42,11 @@ export const Pricing: React.FC<PricingProps> = ({ serviceId, onBack, onContact }
           {service.pricing.map((tier, index) => (
             <div
               key={tier.name}
-              className="border border-egold dark:border-zinc-800 bg-egold dark:bg-zinc-900 shadow-sm dark:shadow-none p-10 flex flex-col h-full hover:shadow-lg hover:bg-ered dark:hover:bg-zinc-800 transition-all duration-300 group"
+              className="border border-azure dark:border-zinc-800 bg-cyan dark:bg-zinc-900 shadow-sm dark:shadow-none p-10 flex flex-col h-full hover:shadow-lg hover:bg-aqua dark:hover:bg-zinc-800 transition-all duration-300 group"
             >
               <div className="mb-8">
-                <span className="text-xs uppercase tracking-widest text-eblue dark:text-zinc-500 mb-2 block">0{index + 1} — {tier.name}</span>
-                <div className="text-4xl font-display font-bold text-ered dark:text-white group-hover:text-egold dark:group-hover:text-white transition-colors">{tier.price}</div>
+                <span className="text-xs uppercase tracking-widest text-azure dark:text-zinc-500 mb-2 block">0{index + 1} — {tier.name}</span>
+                <div className="text-4xl font-display font-bold text-black dark:text-white group-hover:text-azure dark:group-hover:text-white transition-colors">{tier.price}</div>
               </div>
 
               <p className="text-black dark:text-zinc-400 text-sm mb-12 min-h-[40px] transition-colors">

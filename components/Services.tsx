@@ -173,17 +173,17 @@ interface ServicesProps {
 
 export const Services: React.FC<ServicesProps> = ({ onServiceClick }) => {
   return (
-    <section id="services" className="bg-eblue dark:bg-zinc-950 border-t border-egold dark:border-zinc-800 scroll-mt-28 transition-colors duration-300">
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-px bg-egold dark:bg-zinc-800/50">
+    <section id="services" className="bg-mint dark:bg-zinc-950 border-t border-azure dark:border-zinc-800 scroll-mt-28 transition-colors duration-300">
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-px bg-azure/20 dark:bg-zinc-800/50">
         {SERVICES.map((service, index) => (
           <div
             key={service.id}
             onClick={() => onServiceClick(service.id)}
-            className="group p-12 bg-egold dark:bg-zinc-950 relative hover:bg-ered dark:hover:bg-zinc-900/50 transition-all duration-500 cursor-pointer h-full"
+            className="group p-12 bg-mint dark:bg-zinc-950 relative hover:bg-cyan dark:hover:bg-zinc-900/50 transition-all duration-500 cursor-pointer h-full"
           >
             <div className="flex justify-between items-start mb-12">
-              <span className="text-xs font-mono text-slate-700 dark:text-zinc-600">0{index + 1}</span>
-              <service.icon className="w-8 h-8 text-ered dark:text-white transition-colors" />
+              <span className="text-xs font-mono text-black/70 dark:text-zinc-600">0{index + 1}</span>
+              <service.icon className="w-8 h-8 text-azure dark:text-white transition-colors" />
             </div>
 
             <h3 className="text-2xl font-display font-bold text-slate-900 dark:text-white mb-4 transition-colors">{service.title}</h3>
@@ -192,7 +192,7 @@ export const Services: React.FC<ServicesProps> = ({ onServiceClick }) => {
             <div className="flex justify-between items-end">
               <ul className="flex flex-wrap gap-2">
                 {service.features.map(f => (
-                  <li key={f} className="text-[10px] uppercase tracking-wider font-medium px-2 py-1 bg-eblue dark:bg-zinc-900 text-white dark:text-zinc-400 border border-egold dark:border-zinc-800 transition-colors group-hover:border-ered group-hover:bg-ered dark:group-hover:border-zinc-800">
+                  <li key={f} className="text-[10px] uppercase tracking-wider font-medium px-2 py-1 bg-azure dark:bg-zinc-900 text-white dark:text-zinc-400 border border-azure dark:border-zinc-800 transition-colors group-hover:bg-aqua dark:group-hover:border-zinc-800">
                     {f}
                   </li>
                 ))}
@@ -205,11 +205,11 @@ export const Services: React.FC<ServicesProps> = ({ onServiceClick }) => {
         ))}
       </div>
 
-      <div className="py-24 px-6 lg:px-12 border-b border-egold dark:border-zinc-800 transition-colors bg-egold dark:bg-zinc-950">
+      <div className="py-24 px-6 lg:px-12 border-b border-azure dark:border-zinc-800 transition-colors bg-cyan dark:bg-zinc-950">
         <div className="container mx-auto flex flex-col md:flex-row justify-between items-end gap-8">
           <h2 className="text-4xl md:text-6xl font-orbitron font-bold leading-tight transition-colors">
-            <span className="text-ered dark:text-white">SYSTEMS FOR</span> <br />
-            <span className="text-eblue dark:text-outline">THE FUTURE</span>
+            <span className="text-black dark:text-white">SYSTEMS FOR</span> <br />
+            <span className="text-azure dark:text-outline">THE FUTURE</span>
           </h2>
           <p className="text-black dark:text-zinc-400 max-w-md text-right md:text-left transition-colors">
             We don't just build websites. We build digital ecosystems designed to scale, perform, and convert.
