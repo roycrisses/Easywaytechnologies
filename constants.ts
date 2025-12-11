@@ -43,7 +43,7 @@ export const CLIENTS = [
 ];
 
 export const FOUNDERS = [
-    { name: 'Narendra Kalauni', role: 'CEO', initial: 'NK', image: '' },
-    { name: 'Pankaj Joshi', role: 'Manager', initial: 'PJ', image: '' },
-    { name: 'Krishna Karki', role: 'Senior Developer', initial: 'KK', image: '' },
+    { name: 'Billa bhai', role: 'CEO', initial: 'BB', image: '/team/billa-bhai.jpg' },
+    { name: 'Dogesh bhai', role: 'Manager', initial: 'DB', image: '/team/dogesh-bhai.jpg' },
+    { name: 'Duck bhai', role: 'Senior Developer', initial: 'DB', image: '/team/duck-bhai.jpg' },
 ];
