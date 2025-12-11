@@ -14,15 +14,17 @@ export const AiConsultant: React.FC = () => {
     }
   ]);
   const [loading, setLoading] = useState<LoadingState>(LoadingState.IDLE);
-  const messagesEndRef = useRef<HTMLDivElement>(null);
+  const chatContainerRef = useRef<HTMLDivElement>(null);
 
   const scrollToBottom = () => {
-    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+    if (chatContainerRef.current) {
+      chatContainerRef.current.scrollTop = chatContainerRef.current.scrollHeight;
+    }
   };
 
   useEffect(() => {
     scrollToBottom();
-  }, [messages]);
+  }, [messages, loading]);
 
   const handleSend = async (e?: React.FormEvent) => {
     e?.preventDefault();
@@ -87,7 +89,10 @@ export const AiConsultant: React.FC = () => {
           <div className="lg:w-2/3">
             <div className="border border-zinc-800 bg-zinc-900/20 min-h-[500px] flex flex-col">
               {/* Output Display */}
-              <div className="flex-1 overflow-y-auto p-8 space-y-8 font-mono text-sm">
+              <div
+                ref={chatContainerRef}
+                className="flex-1 overflow-y-auto p-8 space-y-8 font-mono text-sm scroll-smooth"
+              >
                 {messages.map((msg) => (
                   <div
                     key={msg.id}
@@ -98,8 +103,8 @@ export const AiConsultant: React.FC = () => {
                     </span>
                     <div
                       className={`max-w-[90%] p-6 border ${msg.role === 'user'
-                          ? 'bg-white text-black border-white'
-                          : 'bg-transparent text-zinc-300 border-zinc-800'
+                        ? 'bg-white text-black border-white'
+                        : 'bg-transparent text-zinc-300 border-zinc-800'
                         }`}
                     >
                       {msg.text}
@@ -111,7 +116,6 @@ export const AiConsultant: React.FC = () => {
                     {'>'} Processing query...
                   </div>
                 )}
-                <div ref={messagesEndRef} />
               </div>
 
               {/* Input Line */}
