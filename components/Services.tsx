@@ -173,8 +173,8 @@ interface ServicesProps {
 
 export const Services: React.FC<ServicesProps> = ({ onServiceClick }) => {
   return (
-    <section id="services" className="bg-mint dark:bg-zinc-950 border-t border-azure dark:border-zinc-800 scroll-mt-28 transition-colors duration-300">
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-px bg-azure/20 dark:bg-zinc-800/50">
+    <section id="services" className="bg-mint dark:bg-zinc-950 border-t border-slate-200 dark:border-zinc-800 scroll-mt-28 transition-colors duration-300">
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-px bg-slate-200 dark:bg-zinc-800/50">
         {SERVICES.map((service, index) => (
           <div
             key={service.id}
@@ -192,7 +192,7 @@ export const Services: React.FC<ServicesProps> = ({ onServiceClick }) => {
             <div className="flex justify-between items-end">
               <ul className="flex flex-wrap gap-2">
                 {service.features.map(f => (
-                  <li key={f} className="text-[10px] uppercase tracking-wider font-medium px-2 py-1 bg-azure dark:bg-zinc-900 text-white dark:text-zinc-400 border border-azure dark:border-zinc-800 transition-colors group-hover:bg-aqua dark:group-hover:border-zinc-800">
+                  <li key={f} className="text-[10px] uppercase tracking-wider font-medium px-2 py-1 bg-cyan dark:bg-zinc-900 text-black dark:text-zinc-400 border border-slate-300 dark:border-zinc-800 transition-colors group-hover:bg-aqua dark:group-hover:border-zinc-800">
                     {f}
                   </li>
                 ))}
@@ -205,7 +205,7 @@ export const Services: React.FC<ServicesProps> = ({ onServiceClick }) => {
         ))}
       </div>
 
-      <div className="py-24 px-6 lg:px-12 border-b border-azure dark:border-zinc-800 transition-colors bg-cyan dark:bg-zinc-950">
+      <div className="py-24 px-6 lg:px-12 border-b border-slate-200 dark:border-zinc-800 transition-colors bg-cyan dark:bg-zinc-950">
         <div className="container mx-auto flex flex-col md:flex-row justify-between items-end gap-8">
           <h2 className="text-4xl md:text-6xl font-orbitron font-bold leading-tight transition-colors">
             <span className="text-black dark:text-white">SYSTEMS FOR</span> <br />

@@ -4,7 +4,7 @@ import './glitch.css';
 
 export const Hero: React.FC = () => {
   return (
-    <section className="relative min-h-screen flex items-center pt-20 overflow-hidden bg-aqua dark:bg-zinc-950 transition-colors duration-300">
+    <section className="relative min-h-screen flex items-center pt-20 overflow-hidden bg-mint dark:bg-zinc-950 transition-colors duration-300">
       <div className="container mx-auto px-6 lg:px-12 relative z-10">
         <div className="grid lg:grid-cols-12 gap-12 items-end">
 
@@ -20,9 +20,9 @@ export const Hero: React.FC = () => {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-6 items-start">
-              <button onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })} className="group flex items-center gap-4 text-slate-900 dark:text-white hover:text-amber-600 dark:hover:text-zinc-400 transition-colors">
-                <div className="w-12 h-12 border border-amber-200 dark:border-zinc-700 rounded-full flex items-center justify-center group-hover:border-amber-500 dark:group-hover:border-white transition-colors">
-                  <ArrowDownRight className="w-5 h-5 text-amber-500 dark:text-white" />
+              <button onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })} className="group flex items-center gap-4 text-black dark:text-white hover:text-azure dark:hover:text-zinc-400 transition-colors">
+                <div className="w-12 h-12 border border-black/30 dark:border-zinc-700 rounded-full flex items-center justify-center group-hover:border-azure dark:group-hover:border-white transition-colors">
+                  <ArrowDownRight className="w-5 h-5 text-black dark:text-white" />
                 </div>
                 <span className="text-sm font-medium uppercase tracking-widest">Explore Services</span>
               </button>
@@ -37,7 +37,7 @@ export const Hero: React.FC = () => {
               <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-sky-100/50 dark:via-zinc-800/10 to-transparent"></div>
             </div>
 
-            <div className="absolute bottom-0 right-0 p-6 bg-cyan dark:bg-zinc-900 border border-azure dark:border-zinc-800 max-w-[200px] transition-colors shadow-sm dark:shadow-none">
+            <div className="absolute bottom-0 right-0 p-6 bg-cyan dark:bg-zinc-900 border border-slate-300 dark:border-zinc-800 max-w-[200px] transition-colors shadow-sm dark:shadow-none">
               <Globe className="w-6 h-6 text-azure dark:text-white mb-3" />
               <p className="text-xs text-black dark:text-zinc-400 uppercase tracking-wider leading-relaxed transition-colors">
                 Serving clients worldwide from our digital HQ.

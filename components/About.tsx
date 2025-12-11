@@ -23,7 +23,7 @@ const FOUNDERS = [
 
 export const About: React.FC = () => {
    return (
-      <section id="about" className="bg-cyan dark:bg-zinc-950 border-t border-azure dark:border-zinc-800 transition-colors duration-300">
+      <section id="about" className="bg-mint dark:bg-zinc-950 border-t border-slate-200 dark:border-zinc-800 transition-colors duration-300">
          <div className="grid lg:grid-cols-2">
             <div className="relative h-[500px] lg:h-auto overflow-hidden">
                <img
@@ -51,7 +51,7 @@ export const About: React.FC = () => {
                   {STATS.map((stat) => (
                      <div key={stat.label}>
                         <span className="block text-3xl font-bold text-black dark:text-white mb-2 transition-colors">{stat.value}</span>
-                        <span className="text-xs text-azure dark:text-zinc-500 uppercase tracking-widest">{stat.label}</span>
+                        <span className="text-xs text-black dark:text-zinc-500 uppercase tracking-widest">{stat.label}</span>
                      </div>
                   ))}
                </div>
@@ -63,7 +63,7 @@ export const About: React.FC = () => {
                      {FOUNDERS.map((founder) => (
                         <div key={founder.name} className="group">
                            <div
-                              className="relative h-72 overflow-hidden border border-azure dark:border-zinc-800 transition-all duration-300 hover:border-aqua dark:hover:border-zinc-600 bg-aqua dark:bg-zinc-900 shadow-sm dark:shadow-none"
+                              className="relative h-72 overflow-hidden border border-slate-300 dark:border-zinc-800 transition-all duration-300 hover:border-azure dark:hover:border-zinc-600 bg-cyan dark:bg-zinc-900 shadow-sm dark:shadow-none"
                               style={founder.image ? {
                                  backgroundImage: `url(${founder.image})`,
                                  backgroundSize: 'cover',
@@ -75,7 +75,7 @@ export const About: React.FC = () => {
 
                               {/* Fallback for no image */}
                               {!founder.image && (
-                                 <div className="absolute inset-0 bg-aqua dark:bg-zinc-900 flex items-center justify-center transition-colors">
+                                 <div className="absolute inset-0 bg-cyan dark:bg-zinc-900 flex items-center justify-center transition-colors">
                                     <span className="text-6xl font-bold text-black/30 dark:text-zinc-700">{founder.initial}</span>
                                  </div>
                               )}
@@ -93,12 +93,12 @@ export const About: React.FC = () => {
 
                {/* Trusted By Section */}
                <div>
-                  <span className="text-xs text-black/70 uppercase tracking-widest block mb-6">Trusted By</span>
+                  <span className="text-xs text-black uppercase tracking-widest block mb-6">Trusted By</span>
                   <div className="flex flex-wrap gap-4">
                      {CLIENTS.map((client) => (
                         <span
                            key={client}
-                           className="text-sm text-black dark:text-zinc-300 px-4 py-2 border border-azure dark:border-zinc-800 bg-aqua dark:bg-zinc-900/50 transition-colors shadow-sm dark:shadow-none"
+                           className="text-sm text-black dark:text-zinc-300 px-4 py-2 border border-slate-300 dark:border-zinc-800 bg-cyan dark:bg-zinc-900/50 transition-colors shadow-sm dark:shadow-none"
                         >
                            {client}
                         </span>

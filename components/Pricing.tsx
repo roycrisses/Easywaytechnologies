@@ -23,7 +23,7 @@ export const Pricing: React.FC<PricingProps> = ({ serviceId, onBack, onContact }
       <div className="container mx-auto px-6 lg:px-12">
         <button
           onClick={onBack}
-          className="group flex items-center gap-3 text-black/70 hover:text-azure dark:hover:text-white mb-12 transition-colors uppercase text-xs tracking-widest font-medium"
+          className="group flex items-center gap-3 text-black hover:text-azure dark:hover:text-white mb-12 transition-colors uppercase text-xs tracking-widest font-medium"
         >
           <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
           Back to Services
@@ -42,10 +42,10 @@ export const Pricing: React.FC<PricingProps> = ({ serviceId, onBack, onContact }
           {service.pricing.map((tier, index) => (
             <div
               key={tier.name}
-              className="border border-azure dark:border-zinc-800 bg-cyan dark:bg-zinc-900 shadow-sm dark:shadow-none p-10 flex flex-col h-full hover:shadow-lg hover:bg-aqua dark:hover:bg-zinc-800 transition-all duration-300 group"
+              className="border border-slate-300 dark:border-zinc-800 bg-cyan dark:bg-zinc-900 shadow-sm dark:shadow-none p-10 flex flex-col h-full hover:shadow-lg hover:bg-aqua dark:hover:bg-zinc-800 transition-all duration-300 group"
             >
               <div className="mb-8">
-                <span className="text-xs uppercase tracking-widest text-azure dark:text-zinc-500 mb-2 block">0{index + 1} — {tier.name}</span>
+                <span className="text-xs uppercase tracking-widest text-black dark:text-zinc-500 mb-2 block">0{index + 1} — {tier.name}</span>
                 <div className="text-4xl font-display font-bold text-black dark:text-white group-hover:text-azure dark:group-hover:text-white transition-colors">{tier.price}</div>
               </div>
 
