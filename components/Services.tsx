@@ -173,47 +173,47 @@ interface ServicesProps {
 
 export const Services: React.FC<ServicesProps> = ({ onServiceClick }) => {
   return (
-    <section id="services" className="bg-zinc-950 border-t border-zinc-800 scroll-mt-28">
+    <section id="services" className="bg-white dark:bg-zinc-950 border-t border-zinc-200 dark:border-zinc-800 scroll-mt-28 transition-colors duration-300">
       <div className="grid md:grid-cols-2 lg:grid-cols-3">
         {SERVICES.map((service, index) => (
           <div
             key={service.id}
             onClick={() => onServiceClick(service.id)}
-            className="group p-12 border-b border-r border-zinc-800 relative hover:bg-zinc-900/50 transition-all duration-500 cursor-pointer"
+            className="group p-12 border-b border-r border-zinc-200 dark:border-zinc-800 relative hover:bg-zinc-50 dark:hover:bg-zinc-900/50 transition-all duration-500 cursor-pointer"
           >
             <div className="flex justify-between items-start mb-12">
-              <span className="text-xs font-mono text-zinc-600">0{index + 1}</span>
-              <service.icon className="w-6 h-6 text-white group-hover:scale-110 transition-transform duration-500" />
+              <span className="text-xs font-mono text-zinc-500 dark:text-zinc-600">0{index + 1}</span>
+              <service.icon className="w-6 h-6 text-zinc-900 dark:text-white group-hover:scale-110 transition-transform duration-500" />
             </div>
 
-            <h3 className="text-2xl font-display font-bold text-white mb-4 uppercase">{service.title}</h3>
-            <p className="text-zinc-500 text-sm leading-relaxed mb-8 max-w-xs">
+            <h3 className="text-2xl font-display font-bold text-zinc-900 dark:text-white mb-4 uppercase">{service.title}</h3>
+            <p className="text-zinc-600 dark:text-zinc-500 text-sm leading-relaxed mb-8 max-w-xs transition-colors">
               {service.description}
             </p>
 
             <div className="flex justify-between items-end">
               <ul className="flex flex-wrap gap-2">
                 {service.features.map(f => (
-                  <li key={f} className="text-[10px] uppercase tracking-wider font-medium px-2 py-1 bg-zinc-900 text-zinc-400 border border-zinc-800">
+                  <li key={f} className="text-[10px] uppercase tracking-wider font-medium px-2 py-1 bg-zinc-100 dark:bg-zinc-900 text-zinc-600 dark:text-zinc-400 border border-zinc-200 dark:border-zinc-800 transition-colors">
                     {f}
                   </li>
                 ))}
               </ul>
               <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <ArrowRight className="w-5 h-5 text-white" />
+                <ArrowRight className="w-5 h-5 text-zinc-900 dark:text-white" />
               </div>
             </div>
           </div>
         ))}
       </div>
 
-      <div className="py-24 px-6 lg:px-12 border-b border-zinc-800">
+      <div className="py-24 px-6 lg:px-12 border-b border-zinc-200 dark:border-zinc-800 transition-colors">
         <div className="container mx-auto flex flex-col md:flex-row justify-between items-end gap-8">
-          <h2 className="text-4xl md:text-6xl font-display font-bold text-white leading-tight">
+          <h2 className="text-4xl md:text-6xl font-display font-bold text-zinc-900 dark:text-white leading-tight transition-colors">
             SYSTEMS FOR <br />
-            <span className="text-outline">THE FUTURE</span>
+            <span className="text-outline-dark dark:text-outline">THE FUTURE</span>
           </h2>
-          <p className="text-zinc-400 max-w-md text-right md:text-left">
+          <p className="text-zinc-600 dark:text-zinc-400 max-w-md text-right md:text-left transition-colors">
             We don't just build websites. We build digital ecosystems designed to scale, perform, and convert.
           </p>
         </div>

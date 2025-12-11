@@ -23,7 +23,7 @@ const FOUNDERS = [
 
 export const About: React.FC = () => {
    return (
-      <section id="about" className="bg-zinc-950 border-t border-zinc-800">
+      <section id="about" className="bg-white dark:bg-zinc-950 border-t border-zinc-200 dark:border-zinc-800 transition-colors duration-300">
          <div className="grid lg:grid-cols-2">
             <div className="relative h-[500px] lg:h-auto overflow-hidden">
                <img
@@ -35,14 +35,14 @@ export const About: React.FC = () => {
             </div>
 
             <div className="p-12 lg:p-24 flex flex-col justify-center">
-               <h2 className="text-5xl font-display font-bold text-white mb-4">
+               <h2 className="text-5xl font-display font-bold text-zinc-900 dark:text-white mb-4 transition-colors">
                   MAKING AN IMPACT
                </h2>
                <p className="text-zinc-500 text-sm uppercase tracking-widest mb-8">EST. 2025</p>
-               <p className="text-xl text-white font-light mb-8 leading-relaxed">
+               <p className="text-xl text-zinc-800 dark:text-white font-light mb-8 leading-relaxed transition-colors">
                   EasyWay Technology is a digital product studio. We bridge the gap between human intuition and machine intelligence.
                </p>
-               <p className="text-zinc-400 leading-relaxed mb-12">
+               <p className="text-zinc-600 dark:text-zinc-400 leading-relaxed mb-12 transition-colors">
                   Our approach is reductive. We strip away the unnecessary to reveal the essential. From complex backend architectures to fluid frontend interfaces, every line of code serves a purpose.
                </p>
 
@@ -50,7 +50,7 @@ export const About: React.FC = () => {
                <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
                   {STATS.map((stat) => (
                      <div key={stat.label}>
-                        <span className="block text-3xl font-bold text-white mb-2">{stat.value}</span>
+                        <span className="block text-3xl font-bold text-zinc-900 dark:text-white mb-2 transition-colors">{stat.value}</span>
                         <span className="text-xs text-zinc-500 uppercase tracking-widest">{stat.label}</span>
                      </div>
                   ))}
@@ -63,7 +63,7 @@ export const About: React.FC = () => {
                      {FOUNDERS.map((founder) => (
                         <div key={founder.name} className="group">
                            <div
-                              className="relative h-72 overflow-hidden border border-zinc-800 transition-all duration-300 hover:border-zinc-600"
+                              className="relative h-72 overflow-hidden border border-zinc-200 dark:border-zinc-800 transition-all duration-300 hover:border-zinc-400 dark:hover:border-zinc-600 bg-zinc-100 dark:bg-zinc-900"
                               style={founder.image ? {
                                  backgroundImage: `url(${founder.image})`,
                                  backgroundSize: 'cover',
@@ -71,19 +71,19 @@ export const About: React.FC = () => {
                               } : {}}
                            >
                               {/* Gradient overlay */}
-                              <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/60 to-transparent"></div>
+                              <div className="absolute inset-0 bg-gradient-to-t from-zinc-900/80 via-zinc-900/40 to-transparent"></div>
 
                               {/* Fallback for no image */}
                               {!founder.image && (
-                                 <div className="absolute inset-0 bg-zinc-900 flex items-center justify-center">
-                                    <span className="text-6xl font-bold text-zinc-700">{founder.initial}</span>
+                                 <div className="absolute inset-0 bg-zinc-100 dark:bg-zinc-900 flex items-center justify-center transition-colors">
+                                    <span className="text-6xl font-bold text-zinc-300 dark:text-zinc-700">{founder.initial}</span>
                                  </div>
                               )}
 
                               {/* Text content */}
                               <div className="absolute bottom-0 left-0 right-0 p-6">
                                  <h4 className="text-white font-semibold text-lg mb-1">{founder.name}</h4>
-                                 <p className="text-xs text-zinc-400 uppercase tracking-wider">{founder.role}</p>
+                                 <p className="text-xs text-zinc-300 uppercase tracking-wider">{founder.role}</p>
                               </div>
                            </div>
                         </div>
@@ -98,7 +98,7 @@ export const About: React.FC = () => {
                      {CLIENTS.map((client) => (
                         <span
                            key={client}
-                           className="text-sm text-zinc-300 px-4 py-2 border border-zinc-800 bg-zinc-900/50"
+                           className="text-sm text-zinc-600 dark:text-zinc-300 px-4 py-2 border border-zinc-200 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-900/50 transition-colors"
                         >
                            {client}
                         </span>

@@ -3,6 +3,7 @@ import { Menu, X } from 'lucide-react';
 import { NavItem } from '../types';
 import { Button } from './ui/Button';
 import { Logo } from './ui/Logo';
+import { ThemeToggle } from './ui/ThemeToggle';
 
 const NAV_ITEMS: NavItem[] = [
   { label: 'Services', href: '#services' },
@@ -34,7 +35,7 @@ export const Header: React.FC = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 border-b ${isScrolled ? 'bg-zinc-950/80 backdrop-blur-md border-zinc-800 py-4' : 'bg-transparent border-transparent py-6'
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 border-b ${isScrolled ? 'bg-white/80 dark:bg-zinc-950/80 backdrop-blur-md border-zinc-200 dark:border-zinc-800 py-4' : 'bg-transparent border-transparent py-6'
         }`}
     >
       <div className="container mx-auto px-6 lg:px-12 flex items-center justify-between">
@@ -48,31 +49,35 @@ export const Header: React.FC = () => {
             <a
               key={item.label}
               href={item.href}
-              className="text-xs font-medium uppercase tracking-widest text-zinc-400 hover:text-white transition-colors"
+              className="text-xs font-medium uppercase tracking-widest text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors"
               onClick={(e) => handleNavClick(e, item.href)}
             >
               {item.label}
             </a>
           ))}
+          <ThemeToggle />
           <Button variant="outline" size="sm" onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}>
             Start Project
           </Button>
         </nav>
 
         {/* Mobile Toggle */}
-        <button
-          className="md:hidden text-white"
-          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-        >
-          {isMobileMenuOpen ? <X /> : <Menu />}
-        </button>
+        <div className="flex items-center gap-4 md:hidden">
+          <ThemeToggle />
+          <button
+            className="text-zinc-900 dark:text-white"
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          >
+            {isMobileMenuOpen ? <X /> : <Menu />}
+          </button>
+        </div>
       </div>
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="fixed inset-0 bg-zinc-950 z-40 flex flex-col justify-center p-8">
+        <div className="fixed inset-0 bg-white dark:bg-zinc-950 z-40 flex flex-col justify-center p-8 transition-colors duration-300">
           <button
-            className="absolute top-6 right-6 text-white"
+            className="absolute top-6 right-6 text-zinc-900 dark:text-white"
             onClick={() => setIsMobileMenuOpen(false)}
           >
             <X size={32} />
@@ -82,7 +87,7 @@ export const Header: React.FC = () => {
               <a
                 key={item.label}
                 href={item.href}
-                className="text-3xl font-display font-bold text-white uppercase hover:text-zinc-500 transition-colors"
+                className="text-3xl font-display font-bold text-zinc-900 dark:text-white uppercase hover:text-zinc-500 dark:hover:text-zinc-500 transition-colors"
                 onClick={(e) => {
                   handleNavClick(e, item.href);
                   setIsMobileMenuOpen(false);
