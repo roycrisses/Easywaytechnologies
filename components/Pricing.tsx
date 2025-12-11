@@ -30,8 +30,8 @@ export const Pricing: React.FC<PricingProps> = ({ serviceId, onBack, onContact }
         </button>
 
         <div className="mb-24">
-          <h1 className="text-6xl md:text-8xl font-display font-bold text-slate-900 dark:text-white uppercase mb-6 leading-[0.9] transition-colors">
-            {service.title} <br /> <span className="text-amber-500 dark:text-zinc-800 transition-colors">Pricing</span>
+          <h1 className="text-6xl md:text-8xl font-display font-bold uppercase mb-6 leading-[0.9] transition-colors">
+            <span className="text-sky-600 dark:text-white">{service.title}</span> <br /> <span className="text-amber-500 dark:text-zinc-800 transition-colors">Pricing</span>
           </h1>
           <p className="text-xl text-slate-600 dark:text-zinc-400 max-w-2xl font-light transition-colors">
             Transparent investment for high-caliber results. Select the tier that aligns with your trajectory.
@@ -42,11 +42,11 @@ export const Pricing: React.FC<PricingProps> = ({ serviceId, onBack, onContact }
           {service.pricing.map((tier, index) => (
             <div
               key={tier.name}
-              className="border border-slate-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 shadow-sm dark:shadow-none p-10 flex flex-col h-full hover:shadow-lg dark:hover:bg-zinc-800 transition-all duration-300 group"
+              className="border border-amber-200 dark:border-zinc-800 bg-amber-50/50 dark:bg-zinc-900 shadow-sm dark:shadow-none p-10 flex flex-col h-full hover:shadow-lg hover:bg-sky-50 dark:hover:bg-zinc-800 transition-all duration-300 group"
             >
               <div className="mb-8">
-                <span className="text-xs uppercase tracking-widest text-slate-500 mb-2 block">0{index + 1} — {tier.name}</span>
-                <div className="text-4xl font-display font-bold text-slate-900 dark:text-white group-hover:text-amber-500 dark:group-hover:text-white transition-colors">{tier.price}</div>
+                <span className="text-xs uppercase tracking-widest text-sky-600 dark:text-zinc-500 mb-2 block">0{index + 1} — {tier.name}</span>
+                <div className="text-4xl font-display font-bold text-amber-600 dark:text-white group-hover:text-sky-600 dark:group-hover:text-white transition-colors">{tier.price}</div>
               </div>
 
               <p className="text-slate-600 dark:text-zinc-400 text-sm mb-12 min-h-[40px] transition-colors">

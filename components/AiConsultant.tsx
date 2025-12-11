@@ -66,8 +66,9 @@ export const AiConsultant: React.FC = () => {
               <Terminal className="w-6 h-6 text-amber-500 dark:text-white" />
               <span className="font-mono text-sm uppercase tracking-widest text-slate-500">AI Interface v2.5</span>
             </div>
-            <h2 className="text-4xl font-display font-bold text-slate-900 dark:text-white mb-6 transition-colors">
-              INTELLIGENT <br /> CONSULTATION
+            <h2 className="text-4xl font-display font-bold mb-6 transition-colors">
+              <span className="text-amber-500 dark:text-white">INTELLIGENT</span> <br />
+              <span className="text-sky-500 dark:text-white">CONSULTATION</span>
             </h2>
             <p className="text-slate-600 dark:text-zinc-400 mb-8 font-light transition-colors">
               Interact with our trained model to get instant estimates, technology recommendations, and capability overviews.
@@ -78,7 +79,7 @@ export const AiConsultant: React.FC = () => {
                 <button
                   key={suggestion}
                   onClick={() => setInput(suggestion)}
-                  className="px-4 py-2 border border-slate-200 dark:border-zinc-800 text-xs uppercase tracking-wide text-slate-600 dark:text-zinc-400 hover:text-slate-900 dark:hover:text-white hover:border-amber-400 dark:hover:border-white transition-all bg-white dark:bg-zinc-900"
+                  className="px-4 py-2 border border-amber-200 dark:border-zinc-800 text-xs uppercase tracking-wide text-slate-700 dark:text-zinc-400 hover:text-amber-600 dark:hover:text-white hover:border-amber-400 hover:bg-amber-50 dark:hover:border-white transition-all bg-sky-50 dark:bg-zinc-900"
                 >
                   {suggestion}
                 </button>
@@ -87,7 +88,7 @@ export const AiConsultant: React.FC = () => {
           </div>
 
           <div className="lg:w-2/3">
-            <div className="border border-slate-200 dark:border-zinc-800 bg-white dark:bg-zinc-900/20 min-h-[500px] flex flex-col transition-colors shadow-sm dark:shadow-none">
+            <div className="border border-amber-200 dark:border-zinc-800 bg-amber-50/30 dark:bg-zinc-900/20 min-h-[500px] flex flex-col transition-colors shadow-sm dark:shadow-none">
               {/* Output Display */}
               <div
                 ref={chatContainerRef}

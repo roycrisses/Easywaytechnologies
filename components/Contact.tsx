@@ -6,7 +6,9 @@ export const Contact: React.FC = () => {
       <section id="contact" className="py-32 bg-slate-50 dark:bg-zinc-950 relative border-t border-slate-200 dark:border-zinc-800 transition-colors duration-300">
          <div className="container mx-auto px-6 lg:px-12 max-w-5xl">
             <div className="text-center mb-20">
-               <h2 className="text-5xl md:text-7xl font-display font-bold text-slate-900 dark:text-white mb-6 transition-colors">Let's Talk.</h2>
+               <h2 className="text-5xl md:text-7xl font-display font-bold mb-6 transition-colors">
+                  <span className="text-amber-500 dark:text-white">Let's</span> <span className="text-sky-500 dark:text-white">Talk.</span>
+               </h2>
                <p className="text-slate-600 dark:text-zinc-400 transition-colors">Tell us about your next visionary project.</p>
             </div>
 
@@ -28,7 +30,7 @@ export const Contact: React.FC = () => {
                </div>
 
                <div className="flex justify-center pt-8">
-                  <Button variant="primary" size="lg" className="min-w-[200px] bg-slate-900 text-white hover:bg-amber-500 dark:bg-white dark:text-black dark:hover:bg-zinc-200">
+                  <Button variant="primary" size="lg" className="min-w-[200px] bg-amber-500 text-white hover:bg-sky-500 dark:bg-white dark:text-black dark:hover:bg-zinc-200">
                      Submit Inquiry
                   </Button>
                </div>

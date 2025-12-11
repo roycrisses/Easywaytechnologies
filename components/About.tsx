@@ -35,10 +35,10 @@ export const About: React.FC = () => {
             </div>
 
             <div className="p-12 lg:p-24 flex flex-col justify-center">
-               <h2 className="text-5xl font-display font-bold text-slate-900 dark:text-white mb-4 transition-colors">
-                  MAKING AN IMPACT
+               <h2 className="text-5xl font-display font-bold mb-4 transition-colors">
+                  <span className="text-amber-600 dark:text-white">MAKING AN</span> <span className="text-sky-500 dark:text-white">IMPACT</span>
                </h2>
-               <p className="text-amber-500 font-bold text-sm uppercase tracking-widest mb-8">EST. 2025</p>
+               <p className="text-sky-600 dark:text-amber-500 font-bold text-sm uppercase tracking-widest mb-8">EST. 2025</p>
                <p className="text-xl text-slate-800 dark:text-white font-light mb-8 leading-relaxed transition-colors">
                   EasyWay Technology is a digital product studio. We bridge the gap between human intuition and machine intelligence.
                </p>
@@ -50,8 +50,8 @@ export const About: React.FC = () => {
                <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
                   {STATS.map((stat) => (
                      <div key={stat.label}>
-                        <span className="block text-3xl font-bold text-slate-900 dark:text-white mb-2 transition-colors">{stat.value}</span>
-                        <span className="text-xs text-slate-500 uppercase tracking-widest">{stat.label}</span>
+                        <span className="block text-3xl font-bold text-amber-600 dark:text-white mb-2 transition-colors">{stat.value}</span>
+                        <span className="text-xs text-sky-600 dark:text-zinc-500 uppercase tracking-widest">{stat.label}</span>
                      </div>
                   ))}
                </div>
