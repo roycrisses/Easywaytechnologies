@@ -173,16 +173,16 @@ interface ServicesProps {
 
 export const Services: React.FC<ServicesProps> = ({ onServiceClick }) => {
   return (
-    <section id="services" className="bg-white dark:bg-zinc-950 border-t border-zinc-200 dark:border-zinc-800 scroll-mt-28 transition-colors duration-300">
-      <div className="grid md:grid-cols-2 lg:grid-cols-3">
+    <section id="services" className="bg-zinc-50 dark:bg-zinc-950 border-t border-zinc-200 dark:border-zinc-800 scroll-mt-28 transition-colors duration-300">
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-px bg-zinc-200 dark:bg-zinc-800/50">
         {SERVICES.map((service, index) => (
           <div
             key={service.id}
             onClick={() => onServiceClick(service.id)}
-            className="group p-12 border-b border-r border-zinc-200 dark:border-zinc-800 relative hover:bg-zinc-50 dark:hover:bg-zinc-900/50 transition-all duration-500 cursor-pointer"
+            className="group p-12 bg-white dark:bg-zinc-950 relative hover:bg-zinc-50 dark:hover:bg-zinc-900/50 transition-all duration-500 cursor-pointer h-full"
           >
             <div className="flex justify-between items-start mb-12">
-              <span className="text-xs font-mono text-zinc-500 dark:text-zinc-600">0{index + 1}</span>
+              <span className="text-xs font-mono text-zinc-400 dark:text-zinc-600">0{index + 1}</span>
               <service.icon className="w-6 h-6 text-zinc-900 dark:text-white group-hover:scale-110 transition-transform duration-500" />
             </div>
 
@@ -207,7 +207,7 @@ export const Services: React.FC<ServicesProps> = ({ onServiceClick }) => {
         ))}
       </div>
 
-      <div className="py-24 px-6 lg:px-12 border-b border-zinc-200 dark:border-zinc-800 transition-colors">
+      <div className="py-24 px-6 lg:px-12 border-b border-zinc-200 dark:border-zinc-800 transition-colors bg-zinc-50 dark:bg-zinc-950">
         <div className="container mx-auto flex flex-col md:flex-row justify-between items-end gap-8">
           <h2 className="text-4xl md:text-6xl font-display font-bold text-zinc-900 dark:text-white leading-tight transition-colors">
             SYSTEMS FOR <br />

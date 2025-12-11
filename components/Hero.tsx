@@ -4,14 +4,14 @@ import './glitch.css';
 
 export const Hero: React.FC = () => {
   return (
-    <section className="relative min-h-screen flex items-center pt-20 overflow-hidden bg-white dark:bg-zinc-950 transition-colors duration-300">
+    <section className="relative min-h-screen flex items-center pt-20 overflow-hidden bg-zinc-50 dark:bg-zinc-950 transition-colors duration-300">
       <div className="container mx-auto px-6 lg:px-12 relative z-10">
         <div className="grid lg:grid-cols-12 gap-12 items-end">
 
           <div className="lg:col-span-8">
             <h1 className="text-6xl md:text-8xl lg:text-[7rem] font-display font-bold text-zinc-900 dark:text-white leading-[0.9] tracking-tight mb-8 transition-colors">
               <span className="glitch relative inline-block" data-text="DIGITAL">DIGITAL</span> <br />
-              <span className="text-zinc-500 dark:text-zinc-700 glitch relative inline-block" data-text="REALITY">REALITY</span> <br />
+              <span className="text-zinc-400 dark:text-zinc-700 glitch relative inline-block" data-text="REALITY">REALITY</span> <br />
               SHIFT.
             </h1>
 
@@ -37,7 +37,7 @@ export const Hero: React.FC = () => {
               <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-zinc-200/50 dark:via-zinc-800/10 to-transparent"></div>
             </div>
 
-            <div className="absolute bottom-0 right-0 p-6 bg-zinc-50 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 max-w-[200px] transition-colors">
+            <div className="absolute bottom-0 right-0 p-6 bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 max-w-[200px] transition-colors shadow-sm dark:shadow-none">
               <Globe className="w-6 h-6 text-zinc-900 dark:text-white mb-3" />
               <p className="text-xs text-zinc-600 dark:text-zinc-400 uppercase tracking-wider leading-relaxed transition-colors">
                 Serving clients worldwide from our digital HQ.
