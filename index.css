@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    body {
+        @apply bg-slate-50 text-slate-900 transition-colors duration-300;
+    }
+
+    .dark body {
+        @apply bg-zinc-950 text-zinc-100;
+    }
+}
+
+.text-stroke-gold {
+    -webkit-text-stroke: 1px rgba(245, 158, 11, 1);
+    color: transparent;
+}
