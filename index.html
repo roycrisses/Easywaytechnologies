@@ -13,6 +13,7 @@
     rel="stylesheet">
   <script>
     tailwind.config = {
+      darkMode: 'class',
       theme: {
         extend: {
           fontFamily: {
@@ -68,6 +69,11 @@
 
     .text-outline {
       -webkit-text-stroke: 1px rgba(255, 255, 255, 0.2);
+      color: transparent;
+    }
+
+    .text-outline-dark {
+      -webkit-text-stroke: 1px rgba(0, 0, 0, 0.8);
       color: transparent;
     }
   </style>
