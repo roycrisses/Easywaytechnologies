@@ -35,7 +35,7 @@ export const Header: React.FC = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 border-b ${isScrolled ? 'bg-amber-50/90 dark:bg-zinc-950/80 backdrop-blur-md border-amber-200 dark:border-zinc-800 py-4' : 'bg-transparent border-transparent py-6'
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 border-b ${isScrolled ? 'bg-amber-200 dark:bg-zinc-950/80 backdrop-blur-md border-amber-300 dark:border-zinc-800 py-4' : 'bg-transparent border-transparent py-6'
         }`}
     >
       <div className="container mx-auto px-6 lg:px-12 flex items-center justify-between">
@@ -75,7 +75,7 @@ export const Header: React.FC = () => {
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="fixed inset-0 bg-slate-50 dark:bg-zinc-950 z-40 flex flex-col justify-center p-8 transition-colors duration-300">
+        <div className="fixed inset-0 bg-sky-200 dark:bg-zinc-950 z-40 flex flex-col justify-center p-8 transition-colors duration-300">
           <button
             className="absolute top-6 right-6 text-slate-900 dark:text-white hover:text-amber-500 transition-colors"
             onClick={() => setIsMobileMenuOpen(false)}

@@ -19,7 +19,7 @@ export const Pricing: React.FC<PricingProps> = ({ serviceId, onBack, onContact }
   if (!service) return null;
 
   return (
-    <div className="min-h-screen bg-slate-50 dark:bg-zinc-950 pt-32 pb-24 transition-colors duration-300">
+    <div className="min-h-screen bg-sky-200 dark:bg-zinc-950 pt-32 pb-24 transition-colors duration-300">
       <div className="container mx-auto px-6 lg:px-12">
         <button
           onClick={onBack}
@@ -42,7 +42,7 @@ export const Pricing: React.FC<PricingProps> = ({ serviceId, onBack, onContact }
           {service.pricing.map((tier, index) => (
             <div
               key={tier.name}
-              className="border border-amber-200 dark:border-zinc-800 bg-amber-50/50 dark:bg-zinc-900 shadow-sm dark:shadow-none p-10 flex flex-col h-full hover:shadow-lg hover:bg-sky-50 dark:hover:bg-zinc-800 transition-all duration-300 group"
+              className="border border-amber-300 dark:border-zinc-800 bg-amber-200 dark:bg-zinc-900 shadow-sm dark:shadow-none p-10 flex flex-col h-full hover:shadow-lg hover:bg-sky-200 dark:hover:bg-zinc-800 transition-all duration-300 group"
             >
               <div className="mb-8">
                 <span className="text-xs uppercase tracking-widest text-sky-600 dark:text-zinc-500 mb-2 block">0{index + 1} — {tier.name}</span>

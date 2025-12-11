@@ -3,7 +3,7 @@ import { Button } from './ui/Button';
 
 export const Contact: React.FC = () => {
    return (
-      <section id="contact" className="py-32 bg-slate-50 dark:bg-zinc-950 relative border-t border-slate-200 dark:border-zinc-800 transition-colors duration-300">
+      <section id="contact" className="py-32 bg-sky-200 dark:bg-zinc-950 relative border-t border-sky-300 dark:border-zinc-800 transition-colors duration-300">
          <div className="container mx-auto px-6 lg:px-12 max-w-5xl">
             <div className="text-center mb-20">
                <h2 className="text-5xl md:text-7xl font-display font-bold mb-6 transition-colors">

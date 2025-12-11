@@ -173,13 +173,13 @@ interface ServicesProps {
 
 export const Services: React.FC<ServicesProps> = ({ onServiceClick }) => {
   return (
-    <section id="services" className="bg-slate-50 dark:bg-zinc-950 border-t border-slate-200 dark:border-zinc-800 scroll-mt-28 transition-colors duration-300">
+    <section id="services" className="bg-sky-200 dark:bg-zinc-950 border-t border-sky-300 dark:border-zinc-800 scroll-mt-28 transition-colors duration-300">
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-px bg-slate-200 dark:bg-zinc-800/50">
         {SERVICES.map((service, index) => (
           <div
             key={service.id}
             onClick={() => onServiceClick(service.id)}
-            className="group p-12 bg-amber-50/50 dark:bg-zinc-950 relative hover:bg-sky-100 dark:hover:bg-zinc-900/50 transition-all duration-500 cursor-pointer h-full"
+            className="group p-12 bg-amber-200 dark:bg-zinc-950 relative hover:bg-sky-200 dark:hover:bg-zinc-900/50 transition-all duration-500 cursor-pointer h-full"
           >
             <div className="flex justify-between items-start mb-12">
               <span className="text-xs font-mono text-slate-400 dark:text-zinc-600">0{index + 1}</span>
@@ -194,7 +194,7 @@ export const Services: React.FC<ServicesProps> = ({ onServiceClick }) => {
             <div className="flex justify-between items-end">
               <ul className="flex flex-wrap gap-2">
                 {service.features.map(f => (
-                  <li key={f} className="text-[10px] uppercase tracking-wider font-medium px-2 py-1 bg-sky-50 dark:bg-zinc-900 text-slate-700 dark:text-zinc-400 border border-sky-200 dark:border-zinc-800 transition-colors group-hover:border-amber-300 group-hover:bg-amber-50 dark:group-hover:border-zinc-800">
+                  <li key={f} className="text-[10px] uppercase tracking-wider font-medium px-2 py-1 bg-sky-200 dark:bg-zinc-900 text-slate-800 dark:text-zinc-400 border border-sky-300 dark:border-zinc-800 transition-colors group-hover:border-amber-400 group-hover:bg-amber-200 dark:group-hover:border-zinc-800">
                     {f}
                   </li>
                 ))}
@@ -207,7 +207,7 @@ export const Services: React.FC<ServicesProps> = ({ onServiceClick }) => {
         ))}
       </div>
 
-      <div className="py-24 px-6 lg:px-12 border-b border-slate-200 dark:border-zinc-800 transition-colors bg-slate-50 dark:bg-zinc-950">
+      <div className="py-24 px-6 lg:px-12 border-b border-amber-300 dark:border-zinc-800 transition-colors bg-amber-200 dark:bg-zinc-950">
         <div className="container mx-auto flex flex-col md:flex-row justify-between items-end gap-8">
           <h2 className="text-4xl md:text-6xl font-display font-bold leading-tight transition-colors">
             <span className="text-amber-600 dark:text-white">SYSTEMS FOR</span> <br />
