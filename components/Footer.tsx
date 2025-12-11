@@ -10,8 +10,8 @@ export const Footer: React.FC = () => {
                      EasyWay<span className="text-zinc-700">.</span>
                   </span>
                   <p className="text-zinc-500 text-xs">Mahendranagar, Nepal</p>
-                  <a href="tel:+9779700802493" className="text-zinc-500 text-xs hover:text-white transition-colors">
-                     +977 9700802493
+                  <a href="tel:+9779700804395" className="text-zinc-500 text-xs hover:text-white transition-colors">
+                     +977 9700804395
                   </a>
                   <a href="mailto:info@easyway.com.np" className="text-zinc-500 text-xs hover:text-white transition-colors">
                      info@easyway.com.np

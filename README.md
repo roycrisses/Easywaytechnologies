@@ -35,7 +35,7 @@ A modern, professional website for EasyWay Technology - a digital solutions comp
    - Create a `.env.local` file in the root directory
    - Add your Gemini API key:
      ```
-     GEMINI_API_KEY=your_api_key_here
+     VITE_GEMINI_API_KEY=your_api_key_here
      ```
 
 4. Run the development server:
@@ -50,7 +50,7 @@ This project is configured for deployment on Netlify. Simply connect your GitHub
 ## 📞 Contact
 
 - **Location**: Mahendranagar, Nepal
-- **Phone**: +977 9700802493
+- **Phone**: +977 9700804395
 - **Email**: info@easyway.com.np
 
 ### Social Media

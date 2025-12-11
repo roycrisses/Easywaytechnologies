@@ -41,7 +41,7 @@ export const Contact: React.FC = () => {
                </div>
                <div>
                   <p className="text-xs uppercase tracking-widest text-zinc-600 mb-2">Phone</p>
-                  <a href="tel:+9779700802493" className="text-white hover:text-zinc-400">+977 9700802493</a>
+                  <a href="tel:+9779700804395" className="text-white hover:text-zinc-400">+977 9700804395</a>
                </div>
                <div>
                   <p className="text-xs uppercase tracking-widest text-zinc-600 mb-2">Location</p>

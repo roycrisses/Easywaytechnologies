@@ -1,6 +1,6 @@
 import { GoogleGenAI } from "@google/genai";
 
-const API_KEY = process.env.API_KEY || '';
+const API_KEY = import.meta.env.VITE_GEMINI_API_KEY || '';
 
 // Updated System instruction for the "High-End Agency" persona
 const SYSTEM_INSTRUCTION = `
@@ -30,9 +30,10 @@ export const getAiResponse = async (userMessage: string): Promise<string> => {
 
   try {
     const ai = new GoogleGenAI({ apiKey: API_KEY });
-    
+
+    // @ts-ignore - types might be outdated for the new SDK structure if using @google/genai
     const response = await ai.models.generateContent({
-      model: 'gemini-2.5-flash',
+      model: 'gemini-1.5-flash',
       contents: userMessage,
       config: {
         systemInstruction: SYSTEM_INSTRUCTION,
