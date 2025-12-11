@@ -17,7 +17,6 @@ const STATS = [
 ];
 
 const FOUNDERS = [
-   { name: 'Narendra Kalauni', role: 'CEO & Co-Founder', initial: 'NK', image: null },
    { name: 'Pankaj Joshi', role: 'Manager & Co-Founder', initial: 'PJ', image: null },
    { name: 'Krishna Karki', role: 'Senior Developer & Co-Founder', initial: 'KK', image: '/images/krishna-karki.png' },
 ];
