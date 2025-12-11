@@ -23,7 +23,7 @@ const FOUNDERS = [
 
 export const About: React.FC = () => {
    return (
-      <section id="about" className="bg-white dark:bg-zinc-950 border-t border-zinc-200 dark:border-zinc-800 transition-colors duration-300">
+      <section id="about" className="bg-zinc-50 dark:bg-zinc-950 border-t border-zinc-200 dark:border-zinc-800 transition-colors duration-300">
          <div className="grid lg:grid-cols-2">
             <div className="relative h-[500px] lg:h-auto overflow-hidden">
                <img
@@ -63,7 +63,7 @@ export const About: React.FC = () => {
                      {FOUNDERS.map((founder) => (
                         <div key={founder.name} className="group">
                            <div
-                              className="relative h-72 overflow-hidden border border-zinc-200 dark:border-zinc-800 transition-all duration-300 hover:border-zinc-400 dark:hover:border-zinc-600 bg-zinc-100 dark:bg-zinc-900"
+                              className="relative h-72 overflow-hidden border border-zinc-200 dark:border-zinc-800 transition-all duration-300 hover:border-zinc-400 dark:hover:border-zinc-600 bg-white dark:bg-zinc-900 shadow-sm dark:shadow-none"
                               style={founder.image ? {
                                  backgroundImage: `url(${founder.image})`,
                                  backgroundSize: 'cover',
@@ -75,7 +75,7 @@ export const About: React.FC = () => {
 
                               {/* Fallback for no image */}
                               {!founder.image && (
-                                 <div className="absolute inset-0 bg-zinc-100 dark:bg-zinc-900 flex items-center justify-center transition-colors">
+                                 <div className="absolute inset-0 bg-white dark:bg-zinc-900 flex items-center justify-center transition-colors">
                                     <span className="text-6xl font-bold text-zinc-300 dark:text-zinc-700">{founder.initial}</span>
                                  </div>
                               )}
@@ -98,7 +98,7 @@ export const About: React.FC = () => {
                      {CLIENTS.map((client) => (
                         <span
                            key={client}
-                           className="text-sm text-zinc-600 dark:text-zinc-300 px-4 py-2 border border-zinc-200 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-900/50 transition-colors"
+                           className="text-sm text-zinc-600 dark:text-zinc-300 px-4 py-2 border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900/50 transition-colors shadow-sm dark:shadow-none"
                         >
                            {client}
                         </span>
