@@ -57,7 +57,7 @@ export const AiConsultant: React.FC = () => {
   };
 
   return (
-    <section id="ai-consultant" className="py-24 bg-white dark:bg-zinc-950 border-b border-zinc-200 dark:border-zinc-800 transition-colors duration-300">
+    <section id="ai-consultant" className="py-24 bg-zinc-50 dark:bg-zinc-950 border-b border-zinc-200 dark:border-zinc-800 transition-colors duration-300">
       <div className="container mx-auto px-6 lg:px-12">
         <div className="flex flex-col lg:flex-row gap-16">
 
@@ -78,7 +78,7 @@ export const AiConsultant: React.FC = () => {
                 <button
                   key={suggestion}
                   onClick={() => setInput(suggestion)}
-                  className="px-4 py-2 border border-zinc-200 dark:border-zinc-800 text-xs uppercase tracking-wide text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:border-zinc-400 dark:hover:border-white transition-all"
+                  className="px-4 py-2 border border-zinc-200 dark:border-zinc-800 text-xs uppercase tracking-wide text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:border-zinc-400 dark:hover:border-white transition-all bg-white dark:bg-zinc-900"
                 >
                   {suggestion}
                 </button>
@@ -87,7 +87,7 @@ export const AiConsultant: React.FC = () => {
           </div>
 
           <div className="lg:w-2/3">
-            <div className="border border-zinc-200 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-900/20 min-h-[500px] flex flex-col transition-colors">
+            <div className="border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900/20 min-h-[500px] flex flex-col transition-colors shadow-sm dark:shadow-none">
               {/* Output Display */}
               <div
                 ref={chatContainerRef}
@@ -104,7 +104,7 @@ export const AiConsultant: React.FC = () => {
                     <div
                       className={`max-w-[90%] p-6 border transition-colors ${msg.role === 'user'
                         ? 'bg-zinc-900 dark:bg-white text-white dark:text-black border-zinc-900 dark:border-white'
-                        : 'bg-transparent text-zinc-700 dark:text-zinc-300 border-zinc-200 dark:border-zinc-800'
+                        : 'bg-zinc-50 dark:bg-zinc-900/50 text-zinc-700 dark:text-zinc-300 border-zinc-200 dark:border-zinc-800'
                         }`}
                     >
                       {msg.text}
@@ -119,7 +119,7 @@ export const AiConsultant: React.FC = () => {
               </div>
 
               {/* Input Line */}
-              <form onSubmit={handleSend} className="border-t border-zinc-200 dark:border-zinc-800 p-4 bg-white dark:bg-zinc-950 flex items-center gap-4 transition-colors">
+              <form onSubmit={handleSend} className="border-t border-zinc-200 dark:border-zinc-800 p-4 bg-zinc-50 dark:bg-zinc-950 flex items-center gap-4 transition-colors">
                 <span className="text-zinc-500 font-mono">{'>'}</span>
                 <input
                   type="text"
