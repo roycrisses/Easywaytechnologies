@@ -63,7 +63,7 @@ export const About: React.FC = () => {
                      {FOUNDERS.map((founder) => (
                         <div key={founder.name} className="group">
                            <div
-                              className="relative h-72 overflow-hidden border border-slate-200 dark:border-zinc-800 transition-all duration-300 hover:border-amber-400 dark:hover:border-zinc-600 bg-white dark:bg-zinc-900 shadow-sm dark:shadow-none"
+                              className="relative h-72 overflow-hidden border border-amber-200 dark:border-zinc-800 transition-all duration-300 hover:border-amber-400 dark:hover:border-zinc-600 bg-amber-50 dark:bg-zinc-900 shadow-sm dark:shadow-none"
                               style={founder.image ? {
                                  backgroundImage: `url(${founder.image})`,
                                  backgroundSize: 'cover',
@@ -75,7 +75,7 @@ export const About: React.FC = () => {
 
                               {/* Fallback for no image */}
                               {!founder.image && (
-                                 <div className="absolute inset-0 bg-white dark:bg-zinc-900 flex items-center justify-center transition-colors">
+                                 <div className="absolute inset-0 bg-sky-50 dark:bg-zinc-900 flex items-center justify-center transition-colors">
                                     <span className="text-6xl font-bold text-slate-300 dark:text-zinc-700">{founder.initial}</span>
                                  </div>
                               )}
@@ -98,7 +98,7 @@ export const About: React.FC = () => {
                      {CLIENTS.map((client) => (
                         <span
                            key={client}
-                           className="text-sm text-slate-600 dark:text-zinc-300 px-4 py-2 border border-slate-200 dark:border-zinc-800 bg-white dark:bg-zinc-900/50 transition-colors shadow-sm dark:shadow-none"
+                           className="text-sm text-slate-700 dark:text-zinc-300 px-4 py-2 border border-sky-200 dark:border-zinc-800 bg-sky-50 dark:bg-zinc-900/50 transition-colors shadow-sm dark:shadow-none"
                         >
                            {client}
                         </span>
