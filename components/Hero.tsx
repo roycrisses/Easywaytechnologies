@@ -4,15 +4,15 @@ import './glitch.css';
 
 export const Hero: React.FC = () => {
   return (
-    <section className="relative min-h-screen flex items-center pt-20 overflow-hidden bg-sky-200 dark:bg-zinc-950 transition-colors duration-300">
+    <section className="relative min-h-screen flex items-center pt-20 overflow-hidden bg-eblue dark:bg-zinc-950 transition-colors duration-300">
       <div className="container mx-auto px-6 lg:px-12 relative z-10">
         <div className="grid lg:grid-cols-12 gap-12 items-end">
 
           <div className="lg:col-span-8">
             <h1 className="text-6xl md:text-8xl lg:text-[7rem] font-display font-bold leading-[0.9] tracking-tight mb-8 transition-colors">
-              <span className="text-amber-500 dark:text-white glitch relative inline-block" data-text="DIGITAL">DIGITAL</span> <br />
-              <span className="text-sky-500 dark:text-zinc-700 glitch relative inline-block" data-text="REALITY">REALITY</span> <br />
-              <span className="text-slate-800 dark:text-white">SHIFT.</span>
+              <span className="text-egold dark:text-white glitch relative inline-block" data-text="DIGITAL">DIGITAL</span> <br />
+              <span className="text-ered dark:text-zinc-700 glitch relative inline-block" data-text="REALITY">REALITY</span> <br />
+              <span className="text-white dark:text-white">SHIFT.</span>
             </h1>
 
             <p className="text-lg md:text-xl text-slate-600 dark:text-zinc-400 max-w-lg mb-12 leading-relaxed font-light transition-colors">
@@ -37,7 +37,7 @@ export const Hero: React.FC = () => {
               <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-sky-100/50 dark:via-zinc-800/10 to-transparent"></div>
             </div>
 
-            <div className="absolute bottom-0 right-0 p-6 bg-amber-200 dark:bg-zinc-900 border border-amber-300 dark:border-zinc-800 max-w-[200px] transition-colors shadow-sm dark:shadow-none">
+            <div className="absolute bottom-0 right-0 p-6 bg-egold dark:bg-zinc-900 border border-ered dark:border-zinc-800 max-w-[200px] transition-colors shadow-sm dark:shadow-none">
               <Globe className="w-6 h-6 text-sky-500 dark:text-white mb-3" />
               <p className="text-xs text-slate-700 dark:text-zinc-400 uppercase tracking-wider leading-relaxed transition-colors">
                 Serving clients worldwide from our digital HQ.

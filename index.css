@@ -4,7 +4,7 @@
 
 @layer base {
     body {
-        @apply bg-amber-200 text-slate-900 transition-colors duration-300;
+        @apply bg-egold text-slate-900 transition-colors duration-300;
     }
 
     .dark body {

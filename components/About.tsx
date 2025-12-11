@@ -23,7 +23,7 @@ const FOUNDERS = [
 
 export const About: React.FC = () => {
    return (
-      <section id="about" className="bg-amber-200 dark:bg-zinc-950 border-t border-amber-300 dark:border-zinc-800 transition-colors duration-300">
+      <section id="about" className="bg-egold dark:bg-zinc-950 border-t border-ered dark:border-zinc-800 transition-colors duration-300">
          <div className="grid lg:grid-cols-2">
             <div className="relative h-[500px] lg:h-auto overflow-hidden">
                <img
@@ -36,9 +36,9 @@ export const About: React.FC = () => {
 
             <div className="p-12 lg:p-24 flex flex-col justify-center">
                <h2 className="text-5xl font-display font-bold mb-4 transition-colors">
-                  <span className="text-amber-600 dark:text-white">MAKING AN</span> <span className="text-sky-500 dark:text-white">IMPACT</span>
+                  <span className="text-ered dark:text-white">MAKING AN</span> <span className="text-eblue dark:text-white">IMPACT</span>
                </h2>
-               <p className="text-sky-600 dark:text-amber-500 font-bold text-sm uppercase tracking-widest mb-8">EST. 2025</p>
+               <p className="text-eblue dark:text-amber-500 font-bold text-sm uppercase tracking-widest mb-8">EST. 2025</p>
                <p className="text-xl text-slate-800 dark:text-white font-light mb-8 leading-relaxed transition-colors">
                   EasyWay Technology is a digital product studio. We bridge the gap between human intuition and machine intelligence.
                </p>
@@ -50,8 +50,8 @@ export const About: React.FC = () => {
                <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
                   {STATS.map((stat) => (
                      <div key={stat.label}>
-                        <span className="block text-3xl font-bold text-amber-600 dark:text-white mb-2 transition-colors">{stat.value}</span>
-                        <span className="text-xs text-sky-600 dark:text-zinc-500 uppercase tracking-widest">{stat.label}</span>
+                        <span className="block text-3xl font-bold text-ered dark:text-white mb-2 transition-colors">{stat.value}</span>
+                        <span className="text-xs text-eblue dark:text-zinc-500 uppercase tracking-widest">{stat.label}</span>
                      </div>
                   ))}
                </div>
@@ -63,7 +63,7 @@ export const About: React.FC = () => {
                      {FOUNDERS.map((founder) => (
                         <div key={founder.name} className="group">
                            <div
-                              className="relative h-72 overflow-hidden border border-amber-300 dark:border-zinc-800 transition-all duration-300 hover:border-amber-400 dark:hover:border-zinc-600 bg-amber-200 dark:bg-zinc-900 shadow-sm dark:shadow-none"
+                              className="relative h-72 overflow-hidden border border-ered dark:border-zinc-800 transition-all duration-300 hover:border-eblue dark:hover:border-zinc-600 bg-eblue dark:bg-zinc-900 shadow-sm dark:shadow-none"
                               style={founder.image ? {
                                  backgroundImage: `url(${founder.image})`,
                                  backgroundSize: 'cover',
@@ -75,7 +75,7 @@ export const About: React.FC = () => {
 
                               {/* Fallback for no image */}
                               {!founder.image && (
-                                 <div className="absolute inset-0 bg-sky-200 dark:bg-zinc-900 flex items-center justify-center transition-colors">
+                                 <div className="absolute inset-0 bg-egold dark:bg-zinc-900 flex items-center justify-center transition-colors">
                                     <span className="text-6xl font-bold text-slate-300 dark:text-zinc-700">{founder.initial}</span>
                                  </div>
                               )}
@@ -98,7 +98,7 @@ export const About: React.FC = () => {
                      {CLIENTS.map((client) => (
                         <span
                            key={client}
-                           className="text-sm text-slate-800 dark:text-zinc-300 px-4 py-2 border border-sky-300 dark:border-zinc-800 bg-sky-200 dark:bg-zinc-900/50 transition-colors shadow-sm dark:shadow-none"
+                           className="text-sm text-white dark:text-zinc-300 px-4 py-2 border border-egold dark:border-zinc-800 bg-eblue dark:bg-zinc-900/50 transition-colors shadow-sm dark:shadow-none"
                         >
                            {client}
                         </span>
