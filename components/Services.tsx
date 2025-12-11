@@ -187,7 +187,7 @@ export const Services: React.FC<ServicesProps> = ({ onServiceClick }) => {
             </div>
 
             <h3 className="text-2xl font-display font-bold text-slate-900 dark:text-white mb-4 transition-colors">{service.title}</h3>
-            <p className="text-slate-700 dark:text-zinc-500 text-sm leading-relaxed mb-8 transition-colors">{service.description}</p>
+            <p className="text-black dark:text-zinc-500 text-sm leading-relaxed mb-8 transition-colors">{service.description}</p>
 
             <div className="flex justify-between items-end">
               <ul className="flex flex-wrap gap-2">
@@ -211,7 +211,7 @@ export const Services: React.FC<ServicesProps> = ({ onServiceClick }) => {
             <span className="text-ered dark:text-white">SYSTEMS FOR</span> <br />
             <span className="text-eblue dark:text-outline">THE FUTURE</span>
           </h2>
-          <p className="text-slate-700 dark:text-zinc-400 max-w-md text-right md:text-left transition-colors">
+          <p className="text-black dark:text-zinc-400 max-w-md text-right md:text-left transition-colors">
             We don't just build websites. We build digital ecosystems designed to scale, perform, and convert.
           </p>
         </div>

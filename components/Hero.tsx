@@ -15,7 +15,7 @@ export const Hero: React.FC = () => {
               <span className="text-white dark:text-white">SHIFT.</span>
             </h1>
 
-            <p className="text-lg md:text-xl text-white/80 dark:text-zinc-400 max-w-lg mb-12 leading-relaxed font-light transition-colors">
+            <p className="text-lg md:text-xl text-black dark:text-zinc-400 max-w-lg mb-12 leading-relaxed font-light transition-colors">
               We craft digital experiences that defy expectation. Minimalist architecture for maximum impact.
             </p>
 

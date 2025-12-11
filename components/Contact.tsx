@@ -9,7 +9,7 @@ export const Contact: React.FC = () => {
                <h2 className="text-5xl md:text-7xl font-display font-bold mb-6 transition-colors">
                   <span className="text-egold dark:text-white">Let's</span> <span className="text-ered dark:text-white">Talk.</span>
                </h2>
-               <p className="text-white dark:text-zinc-400 transition-colors">Tell us about your next visionary project.</p>
+               <p className="text-black dark:text-zinc-400 transition-colors">Tell us about your next visionary project.</p>
             </div>
 
             <form className="space-y-12">

@@ -39,10 +39,10 @@ export const About: React.FC = () => {
                   <span className="text-ered dark:text-white">MAKING AN</span> <span className="text-eblue dark:text-white">IMPACT</span>
                </h2>
                <p className="text-eblue dark:text-amber-500 font-bold text-sm uppercase tracking-widest mb-8">EST. 2025</p>
-               <p className="text-xl text-slate-800 dark:text-white font-light mb-8 leading-relaxed transition-colors">
+               <p className="text-xl text-black dark:text-white font-light mb-8 leading-relaxed transition-colors">
                   EasyWay Technology is a digital product studio. We bridge the gap between human intuition and machine intelligence.
                </p>
-               <p className="text-slate-600 dark:text-zinc-400 leading-relaxed mb-12 transition-colors">
+               <p className="text-black dark:text-zinc-400 leading-relaxed mb-12 transition-colors">
                   Our approach is reductive. We strip away the unnecessary to reveal the essential. From complex backend architectures to fluid frontend interfaces, every line of code serves a purpose.
                </p>
 

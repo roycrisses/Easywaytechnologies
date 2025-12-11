@@ -70,7 +70,7 @@ export const AiConsultant: React.FC = () => {
               <span className="text-amber-500 dark:text-white">INTELLIGENT</span> <br />
               <span className="text-sky-500 dark:text-white">CONSULTATION</span>
             </h2>
-            <p className="text-white/80 dark:text-zinc-400 mb-8 font-light transition-colors">
+            <p className="text-black dark:text-zinc-400 mb-8 font-light transition-colors">
               Interact with our trained model to get instant estimates, technology recommendations, and capability overviews.
             </p>
 

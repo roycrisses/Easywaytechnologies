@@ -33,7 +33,7 @@ export const Pricing: React.FC<PricingProps> = ({ serviceId, onBack, onContact }
           <h1 className="text-6xl md:text-8xl font-display font-bold uppercase mb-6 leading-[0.9] transition-colors">
             <span className="text-egold dark:text-white">{service.title}</span> <br /> <span className="text-ered dark:text-zinc-800 transition-colors">Pricing</span>
           </h1>
-          <p className="text-xl text-white/80 dark:text-zinc-400 max-w-2xl font-light transition-colors">
+          <p className="text-xl text-black dark:text-zinc-400 max-w-2xl font-light transition-colors">
             Transparent investment for high-caliber results. Select the tier that aligns with your trajectory.
           </p>
         </div>
@@ -49,7 +49,7 @@ export const Pricing: React.FC<PricingProps> = ({ serviceId, onBack, onContact }
                 <div className="text-4xl font-display font-bold text-ered dark:text-white group-hover:text-egold dark:group-hover:text-white transition-colors">{tier.price}</div>
               </div>
 
-              <p className="text-white/80 dark:text-zinc-400 text-sm mb-12 min-h-[40px] transition-colors">
+              <p className="text-black dark:text-zinc-400 text-sm mb-12 min-h-[40px] transition-colors">
                 {tier.description}
               </p>
 
