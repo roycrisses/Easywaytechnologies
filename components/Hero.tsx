@@ -1,47 +1,48 @@
 import React from 'react';
 import { ArrowDownRight, Globe } from 'lucide-react';
+import './glitch.css';
 
 export const Hero: React.FC = () => {
   return (
     <section className="relative min-h-screen flex items-center pt-20 overflow-hidden bg-zinc-950">
       <div className="container mx-auto px-6 lg:px-12 relative z-10">
         <div className="grid lg:grid-cols-12 gap-12 items-end">
-          
+
           <div className="lg:col-span-8">
             <h1 className="text-6xl md:text-8xl lg:text-[7rem] font-display font-bold text-white leading-[0.9] tracking-tight mb-8">
-              DIGITAL <br/>
-              <span className="text-zinc-700">REALITY</span> <br/>
+              <span className="glitch relative inline-block" data-text="DIGITAL">DIGITAL</span> <br />
+              <span className="text-zinc-700 glitch relative inline-block" data-text="REALITY">REALITY</span> <br />
               SHIFT.
             </h1>
-            
+
             <p className="text-lg md:text-xl text-zinc-400 max-w-lg mb-12 leading-relaxed font-light">
               We craft digital experiences that defy expectation. Minimalist architecture for maximum impact.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-6 items-start">
-               <button onClick={() => document.getElementById('services')?.scrollIntoView({behavior: 'smooth'})} className="group flex items-center gap-4 text-white hover:text-zinc-400 transition-colors">
-                  <div className="w-12 h-12 border border-zinc-700 rounded-full flex items-center justify-center group-hover:border-white transition-colors">
-                    <ArrowDownRight className="w-5 h-5" />
-                  </div>
-                  <span className="text-sm font-medium uppercase tracking-widest">Explore Services</span>
-               </button>
+              <button onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })} className="group flex items-center gap-4 text-white hover:text-zinc-400 transition-colors">
+                <div className="w-12 h-12 border border-zinc-700 rounded-full flex items-center justify-center group-hover:border-white transition-colors">
+                  <ArrowDownRight className="w-5 h-5" />
+                </div>
+                <span className="text-sm font-medium uppercase tracking-widest">Explore Services</span>
+              </button>
             </div>
           </div>
 
           <div className="lg:col-span-4 relative">
-             {/* Abstract animated geometric form */}
-             <div className="relative w-full aspect-square border border-zinc-800 rounded-full animate-spin-slow flex items-center justify-center opacity-60">
-                <div className="w-[80%] h-[80%] border border-zinc-700 rounded-full animate-spin-slow" style={{animationDirection: 'reverse'}}></div>
-                <div className="w-[60%] h-[60%] border border-zinc-600 rounded-full animate-spin-slow"></div>
-                <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-zinc-800/10 to-transparent"></div>
-             </div>
-             
-             <div className="absolute bottom-0 right-0 p-6 bg-zinc-900 border border-zinc-800 max-w-[200px]">
-                <Globe className="w-6 h-6 text-white mb-3" />
-                <p className="text-xs text-zinc-400 uppercase tracking-wider leading-relaxed">
-                  Serving clients worldwide from our digital HQ.
-                </p>
-             </div>
+            {/* Abstract animated geometric form */}
+            <div className="relative w-full aspect-square border border-zinc-800 rounded-full animate-spin-slow flex items-center justify-center opacity-60">
+              <div className="w-[80%] h-[80%] border border-zinc-700 rounded-full animate-spin-slow" style={{ animationDirection: 'reverse' }}></div>
+              <div className="w-[60%] h-[60%] border border-zinc-600 rounded-full animate-spin-slow"></div>
+              <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-zinc-800/10 to-transparent"></div>
+            </div>
+
+            <div className="absolute bottom-0 right-0 p-6 bg-zinc-900 border border-zinc-800 max-w-[200px]">
+              <Globe className="w-6 h-6 text-white mb-3" />
+              <p className="text-xs text-zinc-400 uppercase tracking-wider leading-relaxed">
+                Serving clients worldwide from our digital HQ.
+              </p>
+            </div>
           </div>
         </div>
       </div>

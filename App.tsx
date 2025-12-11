@@ -8,6 +8,7 @@ import { AiConsultant } from './components/AiConsultant';
 import { Contact } from './components/Contact';
 import { Footer } from './components/Footer';
 import { Pricing } from './components/Pricing';
+import { ThemeProvider } from './context/ThemeContext';
 
 function App() {
   const [selectedService, setSelectedService] = React.useState<string | null>(null);
@@ -18,35 +19,39 @@ function App() {
 
   if (selectedService) {
     return (
-      <div className="min-h-screen bg-zinc-950 font-sans selection:bg-white selection:text-black">
-        <Pricing
-          serviceId={selectedService}
-          onBack={() => setSelectedService(null)}
-          onContact={() => {
-            setSelectedService(null);
-            // Allow time for state update and render before scrolling
-            setTimeout(() => {
-              document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
-            }, 100);
-          }}
-        />
-      </div>
+      <ThemeProvider>
+        <div className="min-h-screen bg-white dark:bg-zinc-950 text-zinc-900 dark:text-zinc-100 font-sans selection:bg-zinc-900 selection:text-white dark:selection:bg-white dark:selection:text-black transition-colors duration-300">
+          <Pricing
+            serviceId={selectedService}
+            onBack={() => setSelectedService(null)}
+            onContact={() => {
+              setSelectedService(null);
+              // Allow time for state update and render before scrolling
+              setTimeout(() => {
+                document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+              }, 100);
+            }}
+          />
+        </div>
+      </ThemeProvider>
     );
   }
 
   return (
-    <div className="min-h-screen bg-zinc-950 font-sans selection:bg-white selection:text-black">
-      <Header />
-      <main>
-        <Hero />
-        <Services onServiceClick={setSelectedService} />
-        <TechStack />
-        <About />
-        <AiConsultant />
-        <Contact />
-      </main>
-      <Footer />
-    </div>
+    <ThemeProvider>
+      <div className="min-h-screen bg-white dark:bg-zinc-950 text-zinc-900 dark:text-zinc-100 font-sans selection:bg-zinc-900 selection:text-white dark:selection:bg-white dark:selection:text-black transition-colors duration-300">
+        <Header />
+        <main>
+          <Hero />
+          <Services onServiceClick={setSelectedService} />
+          <TechStack />
+          <About />
+          <AiConsultant />
+          <Contact />
+        </main>
+        <Footer />
+      </div>
+    </ThemeProvider>
   );
 }
 
