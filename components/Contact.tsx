@@ -3,7 +3,7 @@ import { Button } from './ui/Button';
 
 export const Contact: React.FC = () => {
    return (
-      <section id="contact" className="py-32 bg-white dark:bg-zinc-950 relative border-t border-zinc-200 dark:border-zinc-800 transition-colors duration-300">
+      <section id="contact" className="py-32 bg-zinc-50 dark:bg-zinc-950 relative border-t border-zinc-200 dark:border-zinc-800 transition-colors duration-300">
          <div className="container mx-auto px-6 lg:px-12 max-w-5xl">
             <div className="text-center mb-20">
                <h2 className="text-5xl md:text-7xl font-display font-bold text-zinc-900 dark:text-white mb-6 transition-colors">Let's Talk.</h2>
@@ -14,17 +14,17 @@ export const Contact: React.FC = () => {
                <div className="grid md:grid-cols-2 gap-12">
                   <div className="group">
                      <label className="block text-xs uppercase tracking-widest text-zinc-500 mb-2 group-focus-within:text-zinc-900 dark:group-focus-within:text-white transition-colors">Name</label>
-                     <input type="text" className="w-full bg-transparent border-b border-zinc-300 dark:border-zinc-800 py-4 text-zinc-900 dark:text-white text-lg focus:outline-none focus:border-zinc-900 dark:focus:border-white transition-colors placeholder-zinc-400 dark:placeholder-zinc-600" placeholder="Jane Doe" />
+                     <input type="text" className="w-full bg-transparent border-b border-zinc-300 dark:border-zinc-800 py-4 text-zinc-900 dark:text-white text-lg focus:outline-none focus:border-zinc-900 dark:focus:border-white transition-colors placeholder-zinc-400 dark:placeholder-zinc-600 hover:border-zinc-400 dark:hover:border-zinc-600" placeholder="Jane Doe" />
                   </div>
                   <div className="group">
                      <label className="block text-xs uppercase tracking-widest text-zinc-500 mb-2 group-focus-within:text-zinc-900 dark:group-focus-within:text-white transition-colors">Email</label>
-                     <input type="email" className="w-full bg-transparent border-b border-zinc-300 dark:border-zinc-800 py-4 text-zinc-900 dark:text-white text-lg focus:outline-none focus:border-zinc-900 dark:focus:border-white transition-colors placeholder-zinc-400 dark:placeholder-zinc-600" placeholder="jane@company.com" />
+                     <input type="email" className="w-full bg-transparent border-b border-zinc-300 dark:border-zinc-800 py-4 text-zinc-900 dark:text-white text-lg focus:outline-none focus:border-zinc-900 dark:focus:border-white transition-colors placeholder-zinc-400 dark:placeholder-zinc-600 hover:border-zinc-400 dark:hover:border-zinc-600" placeholder="jane@company.com" />
                   </div>
                </div>
 
                <div className="group">
                   <label className="block text-xs uppercase tracking-widest text-zinc-500 mb-2 group-focus-within:text-zinc-900 dark:group-focus-within:text-white transition-colors">Project Details</label>
-                  <textarea rows={4} className="w-full bg-transparent border-b border-zinc-300 dark:border-zinc-800 py-4 text-zinc-900 dark:text-white text-lg focus:outline-none focus:border-zinc-900 dark:focus:border-white transition-colors resize-none placeholder-zinc-400 dark:placeholder-zinc-600" placeholder="Describe your vision..."></textarea>
+                  <textarea rows={4} className="w-full bg-transparent border-b border-zinc-300 dark:border-zinc-800 py-4 text-zinc-900 dark:text-white text-lg focus:outline-none focus:border-zinc-900 dark:focus:border-white transition-colors resize-none placeholder-zinc-400 dark:placeholder-zinc-600 hover:border-zinc-400 dark:hover:border-zinc-600" placeholder="Describe your vision..."></textarea>
                </div>
 
                <div className="flex justify-center pt-8">
