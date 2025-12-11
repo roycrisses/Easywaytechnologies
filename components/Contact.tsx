@@ -6,7 +6,7 @@ export const Contact: React.FC = () => {
       <section id="contact" className="py-32 bg-eblue dark:bg-zinc-950 relative border-t border-egold dark:border-zinc-800 transition-colors duration-300">
          <div className="container mx-auto px-6 lg:px-12 max-w-5xl">
             <div className="text-center mb-20">
-               <h2 className="text-5xl md:text-7xl font-display font-bold mb-6 transition-colors">
+               <h2 className="text-5xl md:text-7xl font-robot font-bold mb-6 transition-colors">
                   <span className="text-egold dark:text-white">Let's</span> <span className="text-ered dark:text-white">Talk.</span>
                </h2>
                <p className="text-black dark:text-zinc-400 transition-colors">Tell us about your next visionary project.</p>

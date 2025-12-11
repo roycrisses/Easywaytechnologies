@@ -207,7 +207,7 @@ export const Services: React.FC<ServicesProps> = ({ onServiceClick }) => {
 
       <div className="py-24 px-6 lg:px-12 border-b border-egold dark:border-zinc-800 transition-colors bg-egold dark:bg-zinc-950">
         <div className="container mx-auto flex flex-col md:flex-row justify-between items-end gap-8">
-          <h2 className="text-4xl md:text-6xl font-display font-bold leading-tight transition-colors">
+          <h2 className="text-4xl md:text-6xl font-orbitron font-bold leading-tight transition-colors">
             <span className="text-ered dark:text-white">SYSTEMS FOR</span> <br />
             <span className="text-eblue dark:text-outline">THE FUTURE</span>
           </h2>

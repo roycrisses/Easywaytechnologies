@@ -35,7 +35,7 @@ export const About: React.FC = () => {
             </div>
 
             <div className="p-12 lg:p-24 flex flex-col justify-center">
-               <h2 className="text-5xl font-display font-bold mb-4 transition-colors">
+               <h2 className="text-5xl font-bungee font-bold mb-4 transition-colors">
                   <span className="text-ered dark:text-white">MAKING AN</span> <span className="text-eblue dark:text-white">IMPACT</span>
                </h2>
                <p className="text-eblue dark:text-amber-500 font-bold text-sm uppercase tracking-widest mb-8">EST. 2025</p>

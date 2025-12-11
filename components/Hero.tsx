@@ -9,7 +9,7 @@ export const Hero: React.FC = () => {
         <div className="grid lg:grid-cols-12 gap-12 items-end">
 
           <div className="lg:col-span-8">
-            <h1 className="text-6xl md:text-8xl lg:text-[7rem] font-display font-bold leading-[0.9] tracking-tight mb-8 transition-colors">
+            <h1 className="text-6xl md:text-8xl lg:text-[7rem] font-robot font-bold leading-[0.9] tracking-tight mb-8 transition-colors">
               <span className="text-egold dark:text-white glitch relative inline-block" data-text="DIGITAL">DIGITAL</span> <br />
               <span className="text-ered dark:text-zinc-700 glitch relative inline-block" data-text="REALITY">REALITY</span> <br />
               <span className="text-white dark:text-white">SHIFT.</span>

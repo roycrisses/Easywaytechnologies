@@ -58,7 +58,7 @@ export const TechStack: React.FC = () => {
             <div className="container mx-auto px-6 lg:px-12 mb-16">
                 <div className="text-center">
                     <p className="text-xs uppercase tracking-[0.3em] text-ered dark:text-zinc-500 mb-4">Technologies We Master</p>
-                    <h2 className="text-4xl md:text-5xl font-display font-bold transition-colors">
+                    <h2 className="text-4xl md:text-5xl font-audiowide font-bold transition-colors">
                         <span className="text-eblue dark:text-white">Our Tech</span> <span className="text-ered dark:text-white">Stack</span>
                     </h2>
                 </div>
