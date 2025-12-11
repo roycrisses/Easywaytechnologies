@@ -33,7 +33,7 @@ export const getAiResponse = async (userMessage: string): Promise<string> => {
 
     // @ts-ignore - types might be outdated for the new SDK structure if using @google/genai
     const response = await ai.models.generateContent({
-      model: 'gemini-2.0-flash-exp',
+      model: 'gemini-2.5-flash',
       contents: userMessage,
       config: {
         systemInstruction: SYSTEM_INSTRUCTION,
