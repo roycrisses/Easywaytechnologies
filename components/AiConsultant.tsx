@@ -57,19 +57,19 @@ export const AiConsultant: React.FC = () => {
   };
 
   return (
-    <section id="ai-consultant" className="py-24 bg-zinc-950 border-b border-zinc-800">
+    <section id="ai-consultant" className="py-24 bg-white dark:bg-zinc-950 border-b border-zinc-200 dark:border-zinc-800 transition-colors duration-300">
       <div className="container mx-auto px-6 lg:px-12">
         <div className="flex flex-col lg:flex-row gap-16">
 
           <div className="lg:w-1/3">
-            <div className="flex items-center gap-3 mb-6 text-white">
+            <div className="flex items-center gap-3 mb-6 text-zinc-900 dark:text-white transition-colors">
               <Terminal className="w-6 h-6" />
               <span className="font-mono text-sm uppercase tracking-widest text-zinc-500">AI Interface v2.5</span>
             </div>
-            <h2 className="text-4xl font-display font-bold text-white mb-6">
+            <h2 className="text-4xl font-display font-bold text-zinc-900 dark:text-white mb-6 transition-colors">
               INTELLIGENT <br /> CONSULTATION
             </h2>
-            <p className="text-zinc-400 mb-8 font-light">
+            <p className="text-zinc-600 dark:text-zinc-400 mb-8 font-light transition-colors">
               Interact with our trained model to get instant estimates, technology recommendations, and capability overviews.
             </p>
 
@@ -78,7 +78,7 @@ export const AiConsultant: React.FC = () => {
                 <button
                   key={suggestion}
                   onClick={() => setInput(suggestion)}
-                  className="px-4 py-2 border border-zinc-800 text-xs uppercase tracking-wide text-zinc-400 hover:text-white hover:border-white transition-all"
+                  className="px-4 py-2 border border-zinc-200 dark:border-zinc-800 text-xs uppercase tracking-wide text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:border-zinc-400 dark:hover:border-white transition-all"
                 >
                   {suggestion}
                 </button>
@@ -87,7 +87,7 @@ export const AiConsultant: React.FC = () => {
           </div>
 
           <div className="lg:w-2/3">
-            <div className="border border-zinc-800 bg-zinc-900/20 min-h-[500px] flex flex-col">
+            <div className="border border-zinc-200 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-900/20 min-h-[500px] flex flex-col transition-colors">
               {/* Output Display */}
               <div
                 ref={chatContainerRef}
@@ -98,13 +98,13 @@ export const AiConsultant: React.FC = () => {
                     key={msg.id}
                     className={`flex flex-col ${msg.role === 'user' ? 'items-end' : 'items-start'}`}
                   >
-                    <span className="text-[10px] text-zinc-600 mb-2 uppercase tracking-wider">
+                    <span className="text-[10px] text-zinc-500 mb-2 uppercase tracking-wider">
                       {msg.role === 'user' ? 'User_Input' : 'System_Response'}
                     </span>
                     <div
-                      className={`max-w-[90%] p-6 border ${msg.role === 'user'
-                        ? 'bg-white text-black border-white'
-                        : 'bg-transparent text-zinc-300 border-zinc-800'
+                      className={`max-w-[90%] p-6 border transition-colors ${msg.role === 'user'
+                        ? 'bg-zinc-900 dark:bg-white text-white dark:text-black border-zinc-900 dark:border-white'
+                        : 'bg-transparent text-zinc-700 dark:text-zinc-300 border-zinc-200 dark:border-zinc-800'
                         }`}
                     >
                       {msg.text}
@@ -119,19 +119,19 @@ export const AiConsultant: React.FC = () => {
               </div>
 
               {/* Input Line */}
-              <form onSubmit={handleSend} className="border-t border-zinc-800 p-4 bg-zinc-950 flex items-center gap-4">
+              <form onSubmit={handleSend} className="border-t border-zinc-200 dark:border-zinc-800 p-4 bg-white dark:bg-zinc-950 flex items-center gap-4 transition-colors">
                 <span className="text-zinc-500 font-mono">{'>'}</span>
                 <input
                   type="text"
                   value={input}
                   onChange={(e) => setInput(e.target.value)}
                   placeholder="Enter command or query..."
-                  className="flex-1 bg-transparent border-none text-white font-mono text-sm focus:ring-0 focus:outline-none placeholder-zinc-700"
+                  className="flex-1 bg-transparent border-none text-zinc-900 dark:text-white font-mono text-sm focus:ring-0 focus:outline-none placeholder-zinc-400 dark:placeholder-zinc-700 transition-colors"
                 />
                 <button
                   type="submit"
                   disabled={!input.trim() || loading === LoadingState.LOADING}
-                  className="text-white hover:text-zinc-400 disabled:opacity-50"
+                  className="text-zinc-900 dark:text-white hover:text-zinc-500 dark:hover:text-zinc-400 disabled:opacity-50 transition-colors"
                 >
                   <ArrowRight size={20} />
                 </button>

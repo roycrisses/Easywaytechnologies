@@ -54,11 +54,11 @@ export const TechStack: React.FC = () => {
     const duplicatedStack = [...techStack, ...techStack];
 
     return (
-        <section className="py-24 bg-zinc-950 border-t border-zinc-800 overflow-hidden">
+        <section className="py-24 bg-white dark:bg-zinc-950 border-t border-zinc-200 dark:border-zinc-800 overflow-hidden transition-colors duration-300">
             <div className="container mx-auto px-6 lg:px-12 mb-16">
                 <div className="text-center">
                     <p className="text-xs uppercase tracking-[0.3em] text-zinc-500 mb-4">Technologies We Master</p>
-                    <h2 className="text-4xl md:text-5xl font-display font-bold text-white">
+                    <h2 className="text-4xl md:text-5xl font-display font-bold text-zinc-900 dark:text-white transition-colors">
                         Our Tech Stack
                     </h2>
                 </div>
@@ -72,13 +72,13 @@ export const TechStack: React.FC = () => {
                             key={`row1-${index}`}
                             className="flex-shrink-0 mx-4 group"
                         >
-                            <div className="w-24 h-24 md:w-28 md:h-28 bg-zinc-900 border border-zinc-800 rounded-xl flex flex-col items-center justify-center gap-2 transition-all duration-300 hover:border-zinc-600 hover:bg-zinc-800 hover:scale-110">
+                            <div className="w-24 h-24 md:w-28 md:h-28 bg-zinc-50 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-xl flex flex-col items-center justify-center gap-2 transition-all duration-300 hover:border-zinc-400 dark:hover:border-zinc-600 hover:bg-zinc-100 dark:hover:bg-zinc-800 hover:scale-110">
                                 <img
                                     src={tech.icon}
                                     alt={tech.name}
                                     className="w-10 h-10 md:w-12 md:h-12 object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300"
                                 />
-                                <span className="text-[10px] md:text-xs text-zinc-500 group-hover:text-white transition-colors uppercase tracking-wider">
+                                <span className="text-[10px] md:text-xs text-zinc-500 dark:text-zinc-500 group-hover:text-zinc-900 dark:group-hover:text-white transition-colors uppercase tracking-wider">
                                     {tech.name}
                                 </span>
                             </div>
@@ -95,13 +95,13 @@ export const TechStack: React.FC = () => {
                             key={`row2-${index}`}
                             className="flex-shrink-0 mx-4 group"
                         >
-                            <div className="w-24 h-24 md:w-28 md:h-28 bg-zinc-900 border border-zinc-800 rounded-xl flex flex-col items-center justify-center gap-2 transition-all duration-300 hover:border-zinc-600 hover:bg-zinc-800 hover:scale-110">
+                            <div className="w-24 h-24 md:w-28 md:h-28 bg-zinc-50 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-xl flex flex-col items-center justify-center gap-2 transition-all duration-300 hover:border-zinc-400 dark:hover:border-zinc-600 hover:bg-zinc-100 dark:hover:bg-zinc-800 hover:scale-110">
                                 <img
                                     src={tech.icon}
                                     alt={tech.name}
                                     className="w-10 h-10 md:w-12 md:h-12 object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300"
                                 />
-                                <span className="text-[10px] md:text-xs text-zinc-500 group-hover:text-white transition-colors uppercase tracking-wider">
+                                <span className="text-[10px] md:text-xs text-zinc-500 dark:text-zinc-500 group-hover:text-zinc-900 dark:group-hover:text-white transition-colors uppercase tracking-wider">
                                     {tech.name}
                                 </span>
                             </div>
